@@ -1,0 +1,109 @@
+<!--
+    테이블 태그 (표) 
+
+    <td>, <th> : 데이터 셀 (table data)
+    <tr> : 행 (table row)
+    <table> : 표
+
+    기본값은 표에 테두리가 없다. 테두리 속성은 CSS 활용
+
+    표는 가로로 그림. 한 row에 몇개의 column이 있는지 볼것.
+    한 row에 tr태그로 감싸고, row의 component를 td태그에 감싼다
+-->
+
+<!doctype html5>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style media="screen">
+        td {border : 1px solid; width : 50px; height : 50px;}
+        th {border : 1px solid; width : 50px; height : 50px;}
+    </style>
+</head>
+<body>
+    <h3>table 연습 1 : 과일 빙고 4X4</h3>
+    <table>
+        <tr>
+            <td>포도</td>
+            <td>사과</td>
+            <td>딸기</td>
+            <td>복숭아</td>
+        </tr>
+        <tr>
+            <td>망고</td>
+            <td>귤</td>
+            <td>수박</td>
+            <td>멜론</td>
+        </tr>
+        <tr>
+            <td>블루베리</td>
+            <td>라즈베리</td>
+            <td>바나나</td>
+            <td>애플망고</td>
+        </tr>
+        <tr>
+            <td>망고스틴</td>
+            <td>무화과</td>
+            <td>리치</td>
+            <td>체리</td>
+        </tr>
+    </table>
+
+    <!--
+        테이블 구조 관련 태그 (시멘틱 구조화)
+
+        <caption> : 표의 제목
+        <thead> : 제목 행을 그룹화
+        <tbody> : 내용 행을 그룹화
+        <tfoot> : 바닥 행을 그룹화
+
+        보통은 thead의 component는 th 태그 작성 (시멘틱 구조화때문에)
+        th태그는 <b>가 자동으로 적용됨
+    -->
+
+    <!--
+        td 병합 속성
+        rowspan="몇개병합" : 셀을 세로방향으로 병합
+        colspan="몇개병합" : 셀을 가로방향으로 병합
+    -->
+
+    <table>
+        <caption><b>테이블 수업 2 : 내가 하고 있는 겨울방학 공부</b></caption>
+        <thead>
+            <tr>
+                <th>과목명</th>
+                <th>가중치</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>C++</td>
+                <td>30%</td>
+            </tr>
+            <tr>
+                <td>웹프로그래밍 기초</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>인공지능개론 및 텐서플로우 기초</td>
+                <td>25%</td>
+            </tr>
+            <tr>
+                <td>데이터사이언스 기초</td>
+                <td rowspan="2">15%</td>
+            </tr>
+            <tr>
+                <td>git, SQLite</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>가중치 합</td>
+                <td>100%</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
