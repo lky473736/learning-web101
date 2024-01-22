@@ -1,0 +1,31 @@
+<!--
+    CSS와 html을 연결시키는 방식 (적용하는 방식) 
+    - inline : 태그 안에서 style속성 이용 (html body안에서)
+    - internal : style태그를 이용 (html head안에서)
+    - external : link사용 (html head에서, css파일 따로, rel 속성에 stylesheet 고정)
+    - @import : css파일 불러오기 (css파일 따로)
+-->
+
+<!doctype html5>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-HTML</title>
+    <style> <!--internal 방식-->
+        span { 
+            color : yellow;
+            background-color : black;
+        }
+    </style>
+    <link rel="stylesheet" href="topic3_L4_0120_1.css"> <!--external 방식-->
+</head>
+    <body>
+        <p style = "color : blue">
+            아래는 inline 방식으로 p를 꾸미고, internal 방식으로 span을 꾸몄다.
+            <p style="color : gray">Lorem ipsum dolor sit amet, <span>consectetur adipisicing elit.</span> Culpa debitis facere fuga laboriosam placeat provident, quibusdam quidem quo sapiente totam?</p>
+        </p>
+
+        <h1>이것은 external 방식을 이용하여 꾸몄다.</h1>
+    </body>
+</html>

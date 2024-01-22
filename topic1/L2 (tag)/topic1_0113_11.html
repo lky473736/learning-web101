@@ -1,0 +1,39 @@
+<!--
+    select : 선택 목록상자 (option : 항목)
+    textarea : 여러 줄의 텍스트 입력 상자
+    button : 사용자가 클릭 가능한 버튼
+
+    <button type="submit | reset | image | button"> vs <input type="submit | reset | image | button">
+    -> 둘은 기능상으로 동일하지만 button은 input에 비해 빈 태그가 아님.
+       따라서 스타일 면에서 자유도가 높음 
+       (여전히 다른 곳으로 이동하려면 form으로 감싸줘야함)
+-->
+
+<!doctype html5>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select, textarea, button</title>
+</head>
+<body>
+    <form action="submit버튼누르면여기로이동됨.html">
+        지역 : 
+        <select>
+            <!--selected : radio, checkbox의 checked와 동일한 기능을 함-->
+            <option>서울</option>
+            <option>경기</option>
+            <option selected>성남</option>
+            <option>인천</option>
+        </select>
+        <br>
+
+        <!--cols : 가로 크기 (글자 수) 
+            rows : 세로 크기 (행 수)-->
+        자기소개 : <textarea cols="30" rows="5" placeholder="자기소개는 300자 이하로 해주세요"></textarea>
+
+        <button type="submit"><b>스타일 면에서 자유도가 <u>높음</u></b></button>
+        <button type="reset"><b>초기화</b></button>
+    </form>
+</body>
+</html>

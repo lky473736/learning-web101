@@ -1,0 +1,32 @@
+<!--
+    선택자의 조합
+    - 요소와 클래스의 조합 : p.bar {~~~} => p태그이면서 bar라는 클래스가 적용되어야 속성부가 적용됨
+    - 클래스와 클래스의 조합 (다중클래스) : .foo.bar {~~~} => foo와 bar라는 클래스가 적용되어야 속성부가 적용됨
+    - 아이디와 클래스의 조합 : #foo.bar {~~~} => bar라는 class와 foo라는 id가 적용되어야 속성부가 적용됨
+
+    아이디와 아이디의 조합이 없는 이유는 당연히 유일한 selector이기 때문이다.
+    조합된 선택자는 기존의 선택자에 스타일이 중첩되어 적용된다.
+-->
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1.c2 {
+            font-size : 20px;
+            color : red;
+        }
+        .c1 {
+            color : gray;
+        }
+    </style>
+</head>
+<body>
+    <p class="c1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. <span class = "c1 c2">Voluptate corporis dolorem amet perspiciatis!</span> Omnis in incidunt facere cum, eaque ipsam sit vel alias ratione ex id commodi nulla a sed.
+    </p>
+</body>
+</html>
+

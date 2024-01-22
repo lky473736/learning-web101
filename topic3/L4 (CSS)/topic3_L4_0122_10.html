@@ -1,0 +1,30 @@
+<!--
+    상속
+    - <h1>hello, <i>CSS</i></h1>에서 h1에 부여된 속성이 i에게도 상속받아진다
+    - margin, padding, background, border과 같은 박스 모델 속성은 상속되지 않는다
+    - 상속된 값의 구체성
+        전체 선택자 : 0, 0, 0, 0
+        h1#page : 0, 1, 0, 1
+-->
+
+<!doctype html5>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상속</title>
+    <style>
+        * { 
+            color : red;
+        }
+
+        h1#page {
+            color : gray;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="page">hello, <i>CSS</i></h1> 
+    <!--자식요소인 CSS 요소는 빨간색이다. 상속된 구체성은 0, 0, 0, -1이다.-->
+</body>
+</html>

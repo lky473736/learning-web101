@@ -1,0 +1,77 @@
+<!--miniproj 3. 회원가입 창 만들어보기-->
+<!--https://velog.velcdn.com/images%2Fdpdnjs402%2Fpost%2Fb7c88d87-cdd8-488b-9e5b-c93a132063f9%2F%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-06%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.12.36.jpg 참고-->
+
+<!doctype html5>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <form action="회원가입완료.html" method="get"> <!--웹 접근성 확인하기 위해 GET으로 (원래는 당연히 POST로 해야함)-->
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>
+                <label for="name">이름</label> 
+                <input type="text" id="name" name="name">
+                <br>
+            </p>
+            
+            <p>
+                <label for="id">아이디</label> 
+                <input type="text" id="id" name="id"> 
+                <button><b>아이디 중복 확인</b></button>
+                <br>
+                <span style="color:blue"><i>* 4~12글자까지만 입력 가능합니다</i></span>
+            </p>
+
+            <p>
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password"> 
+                <br>
+                <span style="color:blue"><i>* 4~12글자까지만 입력 가능합니다</i></span>
+            </p>
+
+            <p>
+                <label for="checkpassword">비밀번호 확인</label>
+                <input type="password" id="checkpassword"> 
+            </p>
+
+            <p>
+                <label for="birthday">생년월일</label>
+                <input type="date" id="birthday" name="birthday">
+            </p>
+
+            <p>
+                <label for="searchaddress">주소검색</label>
+                <input type="text" placeholder="우편번호" id="searchaddress">
+                <button><b>주소검색</b></button>
+                <br>
+                <label for="address">주소</label>
+                <input type="text" placeholder="기본주소" id="address" name="address"> <input type="text" placeholder="상세주소">
+            </p>
+
+            <p>
+                <label for="email">이메일</label> 
+                <input type="email" id="email" name="email">
+            </p>
+
+            <p>
+                <label for="tel">전화번호</label>  
+                <input type="tel" id="tel" name="tel">
+                <br>
+                <span style="color:blue"><i>* -없이 숫자만 입력</i></span>
+            </p>
+
+            <p>
+                <input type="checkbox" checked name="agreed"> 약관 동의
+                <br>
+                <span style="color:red"><a>* 필수</a></span>
+            </p>
+
+            <input type="submit"> <input type="reset">
+        </fieldset>
+    </form>
+</body>
+</html>

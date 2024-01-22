@@ -1,0 +1,50 @@
+<!--
+    가상 선택자
+    - 문서에 존재하지 않는 요소에 스타일 부여
+    - 가상 클래스 : 미리 정의해놓은 상황에 적용이 되도록 약속되어있는 보이지 않는 클래스 (:) 
+               : 예를 들어서, 버튼을 눌렀을 때 스타일이 달라진다던지...
+               : hover = 마우스를 요소에 가져댔을 때
+               : link = 하이퍼링크이면서 아직 방문하지 않은 앵커
+               : visited = 이미 방문한 하이퍼링크
+               : focus = tab키로 요소 이동할 때 & 클릭할 때
+               : active = 클릭할 때
+    - 가상 요소 : 미리 정의해놓은 위치에 삽입이 되도록 약속되어있는 보이지 않는 요소
+
+    https://developer.mozilla.org/ko/docs/Web/CSS/Pseudo-classes
+-->
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-selector</title>
+    <style>
+        .colorchange:hover {
+            background-color: black;
+            color : yellow;
+        }
+
+        a:link{ 
+            color : blue;
+        }
+
+        a:visited{
+            color : gray;
+        }
+
+        a:focus {
+            background-color: yellow;
+        }
+
+        a:active {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="colorchange">가져다대면 색상이 변합니다.</h1>
+    <a href="https://naver.com">NAVER</a>
+    <br>
+    <a href="https://google.com">GOOGLE</a>
+</body>
+</html>

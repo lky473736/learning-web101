@@ -1,0 +1,57 @@
+<!--
+    폼 요소 
+    - 사용자의 입력을 요구할 때 사용 (텍스트를 입력받거나, 사는 지역을 묻거나...)
+    - 서버에 데이터를 POST하기 위해 사용
+-->
+
+<!-- 
+    <input type = "~~">
+    - type : text, password, radio, checkbox, file...
+    - type의 값에 따라서 입력받는 입력값 유형이 결정됨
+-->
+
+<!doctype html5>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 관련 요소</title>
+</head>
+<body>
+    <form action="제출버튼을누르면여기로이동됨.html"> 
+    <!--action : submit, image 후 어디로 이동할 지-->
+        <b>id :</b> <input type="text" placeholder="Input your id"> 
+        <!--placeholder 속성 : 사용자가 입력하기 전에 텍스트블랭크에 작성되는 안내문-->
+        <br>
+        <b>pw :</b> <input type="password" placeholder="Input your password">
+        <br>
+
+        <b>성별 : </b> 남자 <input type="radio" name = "gender" checked> 
+        <!--name 속성 : 같은 영역의 선택지임을 명시해주는 속성. 서버로 전달할 때 값을 구분하기 위한 필수 절차(그룹화),
+            checked 속성 : 값이 없는 속성, 기본값-->
+        여자 <input type="radio" name = "gender">
+        <br>
+
+        <b>프로필 사진 : </b> <input type="file">
+        <br>
+
+        <b>개인정보에 동의합니다.</b> <input type="checkbox" name="agreed">
+        <br>
+
+        <!--image, submit, reset, button : 전부 일종의 버튼
+            value 속성 : 버튼의 이름 변경-->
+
+        <!--submit, reset을 하기 위해선 form태그로 모든 요소들을 묶어줘야 한다-->
+        <input type="submit" value="제출하기"> <!--값이 서버로 전달됨-->
+        <input type="reset" value="작성 초기화"> <!--값이 서버로 전달되지 않고 초기화됨-->
+        <br>
+        
+        <!--button : 아무런 기본 동작이 주어지지 않은 버튼 (개발자가 커스텀해서 버튼 기능 부여 가능)-->
+        <input type="button" value="아무 기능이 없는 버튼"> 
+        <br>
+
+        <!--image : 이미지가 있는 버튼-->
+        <input type="image" src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/cnoC/image/REAdMfTD-xTNOc4VqmdTkOZh8w8" alt="시나모롤버튼" width="200">
+    </form>
+</body>
+</html>

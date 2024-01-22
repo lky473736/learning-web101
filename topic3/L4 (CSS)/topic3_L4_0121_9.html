@@ -1,0 +1,52 @@
+<!--
+    구체성
+    - 선택자를 얼마나 명시적으로 선언하였느냐를 수치화 한 것
+    - 구체성의 값이 높을수록 우선적으로 스타일이 적용됨
+-->
+
+<!--
+    0, 0, 0, 0 : 구체성 수치 (컴마 때고 숫자가 큰 순이 우선적으로 스타일 적용)
+    - 0, 1, 0, 0 : 모든 id 속성값
+    - 0, 0, 1, 0 : 모든 class 속성값, 기타 속성, 가상클래스
+    - 0, 0, 0, 1 : 선택자에 있는 모든 요소, 가상 요소
+    - 전체 선택자는 0, 0, 0, 0을 가짐 : *
+-->
+
+<!--
+    h1 : 0, 0, 0, 1 (요소 1개)
+    body h1 : 0, 0, 0, 2 (요소 2개)
+    .grape : 0, 0, 1, 0 (클래스 1개)
+    *.bright : 0, 0, 1, 0 (클래스 1개, 전체선택자 1개)
+    p.bright em.dark : 0, 0, 2, 2 (클래스 2개, 요소 2개)
+    #page : 0, 1, 0, 0 (id 1개)
+    div#page : 0, 1, 0, 1 (id 1개, 요소 1개)
+-->
+
+<!--
+    inline 스타일은 html 문서가 우선이다 (1, 0, 0, 0)
+
+    CSS : p#page {color:red;}
+    HTML : <p id = "page" style = "color : blue">~~~~</p>
+
+    이러면 파란색으로 나온다 (하지만 CSS에 !important 키워드를 붙이면 CSS가 우선이다)
+-->
+
+<!doctype html5>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {color : red;} 
+        body h1 {color : green;}
+        h2.grape {color : purple !important;}
+        h2 {color : blue;}
+    </style>
+    <title>구체성</title>
+</head>
+<body>
+    <h1>초록색</h1>
+    <h2>파란색</h2>
+    <h2 class="grape" style="color:yellow">보라색</h2>
+</body>
+</html>

@@ -1,0 +1,31 @@
+/*
+    CSS
+    - cascading style sheets (HTML을 꾸며주는 언어)
+    - html은 웹페이지의 정보를 표현하고, CSS는 html을 보기 좋게 꾸민다
+    - 마크업 문서가 없다면 CSS는 무용지물임 (항상 html과 같이 이야기하게 됨)
+*/
+
+/* CSS에서의 주석은 html과 다르게 슬래쉬, 별표를 사용한다 */
+
+h1 {
+    color : red;
+    font-size : 2em;
+}
+
+/*
+    - selector : h1
+    - 속성 : color, font-size
+    - 값 : red, 2em
+    - 선언 : 속성:값 형태로 지정된 모든것
+*/
+
+/*
+    어느 요소를 꾸밀건지 {그 요소를 어떻게 꾸밀 건지}
+    - selector : 어느 요소를 꾸밀건지 (선택자)
+    - 속성, 값, 선언 : 중괄호 안에서 속성과 값, 그들을 선언
+    - 선언부 : 중괄호 전체
+
+    CSS에서의 속성과 HTML에서의 속성은 서로 다른 말이다
+    CSS의 속성 : property
+    HTML에서 속성 : attribute
+*/

@@ -1,0 +1,60 @@
+<!--
+    label 요소
+    - 폼 컨트롤과 연결 시켜주기 위함으로 필수
+    - label에 해당되는 요소를 클릭하면 label의 for에 매칭되는 요소를 클릭한 것과 같은 기능을 하게 됨
+    - input이나 select, textarea의 id값 == label 요소의 for값
+-->
+
+<!--
+    fieldset : 여러개의 폼 요소를 그룹화하여 구조적으로 만듦 
+    legend : 폼 요소의 제목으로 fieldset 요소 내부에 작성함
+-->
+
+<!--
+    form 요소
+    - 폼 데이터를 그룹화하여 서버에 전송하는 것
+    - 보통은 input의 submit이나, button의 submit을 이용하여 제출
+    - action 속성 : 폼 데이터를 처리하기 위한 서버의 주소, submit하면 여기로 이동됨
+    - method 속성 : 데이터를 전송하는 방식 지정 (GET이냐, POST냐)
+    - name 속성을 붙이면 url에 값이 나타나짐
+    - GET : url에 name 속성에 관련된 모든 값을 띄워줌
+    - POST : url에 name 속성에 관련된 값을 띄워주지 않음 (회원가입, 로그인에 적합)
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form과 관련된 요소들</title>
+</head>
+<body>
+    <form action="폼데이터를처리하기위한서버의주소.html" method="POST">
+        <fieldset>
+            <legend>이름</legend>
+            <label for="username">이름 : </label>
+            <input type="text" id="username" name="username">
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>사는 곳</legend>
+            <label for="userlocation">사는 곳 : </label>
+            <select id="userlocation" name="userlocation">
+                <option>서울</option>
+                <option>경기</option>
+                <option>성남</option>
+            </select>
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>하고 싶은 말</legend>
+            <label for="usercomment">하고 싶은 말 : </label>
+            <textarea id="usercomment" cols="30" rows="10" placeholder="여기에 하고 싶은 말을 남겨주세요" name="usercomment"></textarea>
+            <br>
+        </fieldset>
+
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>

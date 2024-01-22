@@ -1,0 +1,24 @@
+<!--
+    속성 선택자
+    - 단순 속성 : p[class][id]{~~~} or p[class]{~~~}
+    - 정확한 속성  : p[class="foo"]{~~} or p[id="title"]{~~~}
+-->
+
+<!doctype html5>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>property selector</title>
+    <style>
+        p[class] {color : red;}
+        p[class][id] {text-decoration : underline; font-size: 20px;}
+        p[id="title"] {font-size:25px; background-color: yellow;}
+    </style>
+</head>
+<body>
+    <p class="foo">hello</p>
+    <p class="bar">CSS</p>
+    <p class="baz" id="title">HTML</p>
+</body>
+</html>

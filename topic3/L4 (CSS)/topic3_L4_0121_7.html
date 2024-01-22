@@ -1,0 +1,54 @@
+<!--
+    부모와 자식 관계 이해하기
+
+    <html>
+    <body>
+        <div>
+            <h1><span>HTML</span>: Hyper Text Markup Language</h1>
+            <span>CSS는 문서를 꾸며줍니다.</span>
+        </div>
+        <span>Javascript는 문서를 동적으로 제어할 수 있습니다.</span>
+        <p>HTML과 CSS와 JAVASCRIPT를 이용해서 멋진 웹 사이트를 제작할 수 있습니다.</p>
+    </body>
+    </html>
+
+    html이 가장 큰 부모 (조상)
+        - body는 두번째로 큰 부모 (부조상)
+            - span
+            - p
+            - div
+                - h1
+                    - span
+                - span
+-->
+
+<!--
+    문서 구조 관련 선택자
+    - 자손 선택자 : div span {color : red;} (공백으로 구분)
+               : div요소의 자손 중 span요소는 속성부하라
+    - 자식 선택자 : div > span {color : red;} (>로 구분)
+               : div요소의 자식 중 span요소는 속성부하라
+    - 인접 형제 선택자 : div + span {color : red;} (+로 구분)
+               : div와 span이 형제인 상황에서 바로 옆에 위치한다면 span을 속성부하라
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div+span{
+            color :red;
+        }
+    </style>
+</head>
+<body>
+     <div>
+        <h1><span>HTML</span>: Hyper Text Markup Language</h1>
+        <span>CSS는 문서를 꾸며줍니다.</span>
+    </div>
+    <span>Javascript는 문서를 동적으로 제어할 수 있습니다.</span>
+    <p>HTML과 CSS와 JAVASCRIPT를 이용해서 멋진 웹 사이트를 제작할 수 있습니다.</p>
+</body>
+</html>
