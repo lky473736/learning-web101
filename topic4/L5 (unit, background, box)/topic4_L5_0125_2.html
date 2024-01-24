@@ -1,0 +1,47 @@
+<!--
+    CSS 속성 : 색상
+
+    - 색상값을 지정하는 방식에는 크게 5가지가 있다
+        - 키워드 : red, orange, white...
+        - 16진법 : #000000 ~ #ffffff (검정색 ~ 하양색)
+          16진법에서 두자리씩 R, G, B값이다
+          따라서 #123456 이러면 R값은 12, G값은 34, B값은 56 (16진수)
+          당연히 R, G, B의 각 최댓값을 합하면 하얀색 (빛색)이 된다
+        - 16진법 축약 : #aa11cc == #a1c
+        - rgb값 : rgb(0, 0, 0) ~ rgb(255, 255, 255) (검정색 ~ 하양색), 각 자리수는 255가 최대
+        - rgba값 : rgb값 + alpha값(투명도)
+-->
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컬러속성</title>
+    <style>
+        div.red {background-color: #ff0000;}
+        div.green {background-color: #00ff00;}
+        div.blue {background-color: #0000ff;}
+    </style>
+</head>
+<body>
+    <h1>color</h1>
+    <div class="red">
+        <p style="text-align:center; color:white;">red</p>
+    </div>
+
+    <div class="green">
+        <p style="text-align:center; color:white;">green</p>
+    </div>
+
+    <div class="blue">
+        <p style="text-align:center; color:white;">blue</p>
+    </div>
+
+    <h1 style="color: red"> heading </h1> 
+    <h1 style="color: #ff0000"> heading </h1>
+    <h1 style="color: #f00"> heading </h1>
+    <h1 style="color: rgb(255,0,0)"> heading </h1>    
+    <h1 style="color: rgba(255,0,0, 0.2)"> heading </h1>
+    <!--a값의 범위 : 0~1, double값, 작을수록 투명-->
+</body>
+</html>

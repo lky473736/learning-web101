@@ -1,0 +1,74 @@
+<!--
+    배경 (background)
+    https://www.w3schools.com/CSSref/css3_pr_background.php
+
+    - 요소의 배경을 컬러나 이미지로 지정
+    - background-color : 요소의 배경을 컬러로
+    - background-image, url(~) : 요소의 배경을 이미지로
+    - background-repeat : 반복할 것인지 (x축반복, y축반복, 반복x)
+    - background-position : 이미지의 위치 (x축 y축)
+    - background-attachment : 
+    - 축약하여 사용 가능
+        - background : bg-color bg-image bg-position bg-repeat ....
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경</title>
+    <style>
+        .bg {
+            background-color : rgb(243, 250, 174);
+            background-image : url(https://avatars.githubusercontent.com/u/51152324?s=280&v=4);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <!--div : 블록 요소이기 때문에 전체 콘텐츠 영역만큼 적용-->
+    <div style="background-color : #00ff00;">
+        초록색 배경이 뒤에 있는데 div입니다.
+    </div>
+
+    <!--span : 인라인 요소, 해당 영역만큼 적용-->
+    <span style="background-color : #0000ff; color : white">
+        파란색 배경이 뒤에 있는데 span입니다.
+    </span>
+
+    <div class="bg">
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+        <p>scroll</p>
+    </div>
+</body>
+</html>

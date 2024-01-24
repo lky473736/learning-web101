@@ -1,0 +1,47 @@
+<!--https://www.w3schools.com/
+    MDN 들어가서 속성 파악하기-->
+
+<!--
+    정의
+    - default : 모든 속성은 기본값 내장
+    - inherited : 상속 가능 여부
+    - animate : 애니메이션 적용 가능 여부
+    - version : CSS 몇부터 지원하는지
+    - javascript : 자바스크립트 코드
+
+    syntax
+    - 무슨 속성이 들어가는지 알 수 있다
+    - initial : 기본값으로 초기화 
+    - inherit : 상속
+-->
+
+<!--
+    단위 
+    - 절대 길이 : px (pixel), pt (point)
+    - 상대 길이 : % (퍼센트), em (n * 100만큼의 퍼센트), mm (밀리미터)
+
+    * 1em = 16px (상속 없이 기본값)
+-->
+
+<!doctype html5>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 길이 단위</title>
+    <style>
+        div {font-size : 15pt;}
+    </style>
+</head>
+<body>
+    <p style="font-size:10px">10px</p>
+    <p style="font-size:10cm">10cm</p>
+    <p style="font-size:10mm">10mm</p>
+    <div>
+        <p style="font-size:200%">원래는 15pt, 200%으로 세팅</p>
+        <p style="font-size:2em">위랑 동일한 크기, 2em=200%</p>
+    </div>
+
+    <p style="font-size:2em">2em==32px(상속 X)</p>
+</body>
+</html>
