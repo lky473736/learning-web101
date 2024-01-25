@@ -1,0 +1,57 @@
+<!--
+    C < P < B < M
+    border : 요소의 테두리를 의미
+
+    border-width : 테두리의 두께
+    border-style : 테두리 선의 종류
+    border-color : 테두리 선의 색깔
+    border-left, right : 테두리의 왼쪽, 오른쪽...
+
+    축약 가능 (border : ~~)
+-->
+
+<!-- 
+    padding : 요소의 안쪽 영역 여백 (content와 테두리 사이)
+
+    여백이기 때문에 top, right, bottom, left 속성으로 나뉨
+-->
+
+<!--
+    margin : 요소의 바깥 여백 
+
+    여백이기 때문에 top, right, bottom, left 속성으로 나뉘어짐
+    margin:auto : 가로축 중앙 정렬 (요소에 width값이 필요)
+    margin-~~:auto를 이용해서 왼쪽 정렬, 가운데 정렬, 오른쪽 정렬을 할 수 있게 됨
+-->
+
+<!doctype html5>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box model practice</title>
+    <style>
+        .border {
+            border-width : 2px 5px 2px 5px; /* 상 우 하 좌 두께 */
+            border-color : red blue green black; /* 상 우 하 좌 색깔 */
+            border-style : solid;
+        }
+        
+        .padding {
+            padding : 20px 20px 20px 20px;
+        }
+        
+        .margin {
+            width : 50px;
+            margin-left : auto;
+            margin-right : auto; /*왼쪽 정렬*/
+            margin-top : 30;
+        }
+    </style>
+</head>
+<body>
+    <div class="border padding margin">
+        box model
+    </div>
+</body>
+</html>

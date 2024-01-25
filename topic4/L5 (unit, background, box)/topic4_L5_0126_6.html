@@ -1,0 +1,33 @@
+<!--
+    margin과 padding의 특징
+
+    - margin과 padding의 px값은 둘 다 양수값이 된다
+    - margin은 음수 가능, padding은 음수 불가능
+    - margin은 auto 가능, padding은 auto 불가능
+    - 단위는 각각 px, % 가능
+-->
+
+<!doctype html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin vs padding</title>
+    <style>
+        div {
+            margin : 0px -10px;
+            border : 3px solid black;
+            padding : 10px
+        }
+    </style>
+</head>
+<body>
+    <div>
+        box model
+    </div>
+
+    <div style="margin-top:-10px">
+        box model, 겹쳐짐
+    </div>
+</body>
+</html>
