@@ -1,0 +1,44 @@
+<!--
+    width : "요소"(content)의 가로값을 결정
+    기본값은 auto이기 때문에 브라우저의 창 크기에 따라 width값이 저절로 작동됨'
+    box의 가로 사이즈 : padding + border + content
+-->
+
+<!--
+    height : "요소(content)"의 세로값을 결정
+    기본값은 auto이다
+    box의 세로 사이즈 : padding + border + content(width or height)
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box model</title>
+    <style>
+        .parent{
+            margin : auto;
+            border : 10px solid blue;
+            width : 200px;
+            height : 200px;
+        }
+
+        .child{
+            width : 200;
+            margin : auto;
+            margin-top : 30;
+            margin-bottom : 30;
+            border : 10px solid red;
+            padding : 10px;
+            width : 50%; /*부모요소의 content영역의 50%*/
+            height : 50%; /*부모요소의 contetn영역의 50%*/
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+        </div>
+    </div>
+</body>
+</html>
