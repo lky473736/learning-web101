@@ -1,0 +1,86 @@
+<!--miniproj 2 : 연습문제 3-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제 3</title>
+</head>
+<body>
+    <form action="post">
+        <fieldset>
+            <legend>필수 입력 사항</legend>
+
+            <table>
+                <tr>
+                    <th><b>ID</b></th>
+                    <td><input type="text" maxlength=10 placeholder="아이디 10글자 이내" name="id"></td>
+                    <td><button type="button">중복 확인</button></td>
+                </tr>
+
+                <tr>
+                    <th><b>비밀번호</b></th>
+                    <td colspan="2">
+                        <input type="password" minlength=4 size=30 placeholder="비밀번호 4자 이상" name="pw">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><b>비밀번호 확인</b></th>
+                    <td colspan="2">
+                        <input type="password" minlength=4 size=30 name="cfpw">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>추가 정보</legend>
+            <b>프로필 사진</b> <input type="file" name="profilephoto">
+            <br>
+
+            <br>
+
+            <b>성별 : </b> 
+            <input type="radio" name="sex" value="man"> 남자 <input type="radio" name="sex" value="woman"> 여자
+            <br>
+            <br>
+
+            <b>생년월일 : </b> <input type="date" name="birthday">
+            <br>
+            <br>
+
+            <b>취미 : </b>
+
+            <table>
+                <tr>
+                    <td><input type="checkbox" name="hobby" value="bs1">야구</td>
+
+                    <td><input type="checkbox" name="hobby" value="bs2">농구</td>
+
+                    <td><input type="checkbox" name="hobby" value="fb">축구</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="hobby" value="study">공부</td>
+                    <td><input type="checkbox" name="hobby" value="listento">음악</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="hobby" value="etc">기타 </td>
+                    <td colspan="2">
+                        <input type="text" name="hobby:etc">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <br>
+
+            자기소개
+            <br>
+            <textarea name="introduce" cols="30" rows="10"></textarea>
+        </fieldset>
+
+        <button type="submit">회원가입</button>
+        <button type="reset">다시입력</button>
+    </form>
+</body>
+</html>
