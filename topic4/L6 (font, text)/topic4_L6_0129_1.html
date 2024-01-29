@@ -1,0 +1,45 @@
+<!--
+    폰트 
+
+    - 타이포그래피의 구조 : Ascender, em, ex, baseline, Descender
+    - ex : 소문자의 문자의 크기 
+    - baseline : 소문자 x를 기준으로 위 아래를 선으로 구분
+    - Ascender : baseline 윗선 위쪽 방향의 영역
+    - Descender : baseline 아랫선 아래쪽 방향의 영역
+    - em : Ascender ~ Descender 영역
+
+    문자열 확인할 때 baseline이 가장 중요
+-->
+
+<!--
+    font-family 
+
+    - font-family : family-name | generic-family
+    - family-name : 지정할 폰트 이름
+    - generic-family : 만약에 사용자의 컴퓨터에 지정할 폰트가 없으면 적절한 폰트를 선택해서 보여줌
+
+    ex) font-family : Helvetica, Dotum, '돋움', sans-serif;
+    => Helvetica 폰트를 적용시키되, 만약 없으면 돋움을 적용시키고, 돋움도 없으면 sans-serif
+
+    + 한글폰트일 경우 앞에 영문자도 같이 선언해주기 (한글지원여부)
+-->
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font-family</title>
+    <style>
+        .fontfamily {
+            font-family: 'Courier New', Courier, Dotum, '돋움', Helvetica, sans-serif;
+        }
+
+    </style>
+</head>
+<body style="font-family:helvetica, sans-serif">
+    <h1 class = "fontfamily">hello</h1>
+    <h2 style = "font-family: sans-serif, Dotum, '돋움';">sans-serif : 삐침이 없다 (== 돋움)</h2>
+    <h2 style = "font-family: serif, Batang, '바탕';">serif : 삐침이 있다 (== 바탕)</h2>
+    <p>상속이 된다</p>
+</body>
+</html>

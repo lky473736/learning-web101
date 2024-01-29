@@ -1,0 +1,62 @@
+<!--
+    line-height (줄간격)
+
+    - 기본값 : normal
+    - 넣을 수 있는 값 : normal, 숫자(현재 글자크기의 배수임), 픽셀, 퍼센트
+    - 줄간격은 줄과 줄 사이에 있는 그 빈 공간이 아니다. (그건 행간임)
+      줄간격은 행간의 1/2 + 글자크기 + 행간의 1/2이다.
+    - 브라우저별로 행간 계산 방법이 다르니 유의
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>line-height</title>
+    <style>
+        div{
+            line-height : normal;
+        }
+    </style>
+</head>
+<body>
+    <div style="line-height:1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis, sint impedit quod, magnam est odio molestias harum necessitatibus excepturi commodi id exercitationem, blanditiis quia a corporis quibusdam explicabo facere.
+    </div>
+
+    <hr>
+    
+    <div style="line-height:2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis, sint impedit quod, magnam est odio molestias harum necessitatibus excepturi commodi id exercitationem, blanditiis quia a corporis quibusdam explicabo facere.
+
+    </div>
+
+    <hr>
+
+    <div style="line-height:3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis, sint impedit quod, magnam est odio molestias harum necessitatibus excepturi commodi id exercitationem, blanditiis quia a corporis quibusdam explicabo facere.
+
+    </div>
+
+    <hr>
+
+    <div style="line-height:10px">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis, sint impedit quod, magnam est odio molestias harum necessitatibus excepturi commodi id exercitationem, blanditiis quia a corporis quibusdam explicabo facere.
+
+    </div>
+
+    <hr>
+
+    <div style="line-height:25px">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis, sint impedit quod, magnam est odio molestias harum necessitatibus excepturi commodi id exercitationem, blanditiis quia a corporis quibusdam explicabo facere.
+
+    </div>
+
+    <hr>
+
+    <div style="line-height:150%">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis, sint impedit quod, magnam est odio molestias harum necessitatibus excepturi commodi id exercitationem, blanditiis quia a corporis quibusdam explicabo facere.
+
+    </div>
+</body>
+</html>
