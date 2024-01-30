@@ -1,0 +1,30 @@
+<!--
+    웹폰트 (실제 실무에서 가장 많이 사용하는 폰트 설정)
+
+    - 사용자의 컴퓨터에 글꼴을 다운로드받아 적용
+    - 시스템 폰트, 이미지 폰트...
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web-font</title>
+    <style>
+        @font-face
+        {
+            font-family : sample_webfont;
+            src : url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff');
+        }
+
+        div {
+            font-family : sample_webfont;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        샘플 웹 폰트로 글씨를 작성 
+    </div>
+</body>
+</html>
