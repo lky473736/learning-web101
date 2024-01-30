@@ -1,0 +1,67 @@
+<!--
+    font-style 
+
+    - 이텔릭체, 기울임체 (이텔릭체보다 기울임각도를 더 줌) 사용하기 
+    - i태그랑 차이가 뭘까
+-->
+
+<!--
+    font-variant 
+
+    - 글꼴을 변환 (소문자를 작은 대문자 형태로 표현)
+    - normal, small-caps ...
+-->
+
+<!--
+    font
+    
+    - 글꼴 속성의 축약형
+    - 여태껏 배운 글꼴 속성을 한번에 작성 가능하다
+    - font-size와 font-family는 반드시 선언해야 한다
+    - 각 속성마다 선언 순서를 명백히 지켜야 한다
+    - font-style, font-variant, font-weight, font-size, font-family 
+
+    ex) font: 2em '돋움', dotum, sans-serif
+        font : italic small-caps 14px '바탕', Batang, sans-serif
+        (컴마는 font-family에만 적용해야 한다)
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font-style</title>
+    <style>
+        .div1{
+            font-style : italic; /*이텔릭*/
+        }
+
+        .div2{
+            font-style : oblique; /*기울임*/
+        }
+
+        .small-caps{
+            font-variant: small-caps;
+        }
+    </style>
+</head>
+<body>
+    <p><i>i태그</i></p>
+
+    <div class="div1">
+        <p>italic</p>
+    </div>
+
+    <div class="div2">
+        <p>기울임체</p>
+    </div>
+
+    <div class="small-caps">
+        <p>small-caps</p>
+    </div>
+
+    <p style="font : italic small-caps 14px '바탕', Batang, sans-serif;">
+        글꼴 속성의 축약형 (font)
+    </p>
+</body>
+</html>
