@@ -1,0 +1,38 @@
+<!-- 
+    display
+
+    - 요소의 렌더링 박스 유형을 결정
+    - block요소를 inline 요소처럼 보여줄 수도 있고, inline 요소를 block요소처럼 보여줄 수도 있다
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div>
+        <div style="display:none">box1</div> 
+        <!--none : 브라우저에서 안보임-->
+    </div>
+
+    <div>
+        <div style="display:inline">box2</div>
+        <!--inline : 본인 콘텐츠 영역만 택하고 있는 inline으로 보임-->
+    </div>
+
+    <div>
+        <div style="display:block">box3</div>
+        <!--block : 한 행을 다 차지함-->
+    </div>
+
+    <div>
+        <div style="display:inline-block">box4</div>
+        <!--inline-block : inline처럼 보이지만 block의 성질을 가짐-->
+    </div>
+</body>
+</html>
