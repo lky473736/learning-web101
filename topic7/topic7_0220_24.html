@@ -1,0 +1,43 @@
+<!--
+    function을 사용해야 하는 상황
+    - 긴 코드를 깔끔하게 단어로 축약할 때
+    - html 밑에 script 코드를 작성하는 것이 표준이다
+    - 한 기능 내에 다양한 parameter가 있을 때
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .alert-box {
+            background-color: rgb(139, 139, 149);
+            color : rgb(0, 0, 0);
+            padding : 30px;
+            border-radius: 5px;
+            display: none;
+        };
+
+        #button1 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-box" id="alertBox">alert 박스 <button onclick="closeAlert()">닫기</button></div>
+    <button id="showAlertbt" onclick="showAlert()">alert 박스</button>
+    
+    <script>
+        function showAlert() {
+            document.getElementById('alertBox').style.display = 'block';
+            document.getElementById('showAlertbt').style.display = 'none';
+        }
+
+        function closeAlert() {
+            document.getElementById('alertBox').style.display = 'none';
+            document.getElementById('showAlertbt').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

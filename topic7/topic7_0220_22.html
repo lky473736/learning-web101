@@ -1,0 +1,39 @@
+<!--
+    html 변경 및 조작 -> javascript 사용
+    setInterval
+    getElementById
+-->
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="hello">안녕하세요</h2>
+    <h2 id="hi">안녕</h2>
+    <h2 id="hello2" style="color:red">안녕하세요2</h2>
+    <h2 id="hello3" style="font-size:50px">안녕하세요3</h2>
+
+    <script>
+        document.getElementById('hello').innerHTML = '안녕';
+        // document : 웹 환경에서의 문서
+        //  . : 객체의
+        // getElementById : id로 html요소를 가져오기 (괄호 안은 id)
+        // innerHTML : 내부 글자
+        document.getElementById('hi').innerHTML = '안녕하세요';
+        document.getElementById('hello2').style.color = 'blue';
+
+        setInterval(function() { // setInterval : 일정한 간격으로 함수를 반복적으로 실행하게 해줌 ({function}, delay)
+            var hello2Element = document.getElementById('hello2');
+            if (hello2Element.style.color === 'blue') {
+                hello2Element.style.color = 'red';
+            } else {
+                hello2Element.style.color = 'blue';
+            }
+        }, 1000);
+
+        document.getElementById('hello3').style.fontSize = '30px';
+    </script>
+</body>
+</html>

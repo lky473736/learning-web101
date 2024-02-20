@@ -1,0 +1,66 @@
+<!--
+    EventListener 
+    - html의 onclick 속성을 js로 구현 
+    - html이 깔끔해짐
+    - html 수정이 불가능한 경우
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .alert-box {
+            background-color: rgb(139, 139, 149);
+            color : rgb(0, 0, 0);
+            padding : 30px;
+            margin : 10px 0px;
+            border-radius: 5px;
+            display: none;
+        };
+
+        #button1 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 닫기 버튼을 EventListener를 이용해서 구현해보자-->
+    <div class="alert-box" id="alertBox1">
+        <p>alert 박스 1</p>
+        <button id="close1">닫기</button>
+    </div>
+    <button id="showAlertbt1" onclick="showAlert('alertBox1', 'showAlertbt1', `로그인이 필요합니다`)">alert 박스 1</button>
+    
+    <div class="alert-box" id="alertBox2">
+        <p>alert 박스 2</p>
+        <button id="close2">닫기</button>
+    </div>
+    <button id="showAlertbt2" onclick="showAlert('alertBox2', 'showAlertbt2', `회원가입이 필요합니다`)">alert 박스 2</button>
+
+    <script>
+        function showAlert(alertBox, showAlertbt, message) {
+            document.getElementById(alertBox).style.display = 'block';
+            document.getElementById(showAlertbt).style.display = 'none';
+            document.getElementById(alertBox).getElementsByTagName('p')[0].innerHTML = message;
+        }
+
+        function closeAlert(alertBox, showAlertbt) {
+            document.getElementById(alertBox).style.display = 'none';
+            document.getElementById(showAlertbt).style.display = 'block';
+        }
+
+        // 클릭 (event)이 되면 function()을 실행한다
+        document.getElementById('close1').addEventListener('click', function() {
+            closeAlert('alertBox1', 'showAlertbt1');
+        });
+
+        document.getElementById('close2').addEventListener('click', function() {
+            closeAlert('alertBox2', 'showAlertbt2');
+        });
+
+        // event의 종류 : click, keydown, scroll ...
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .alert-box {
+            background-color: rgb(139, 139, 149);
+            color : rgb(0, 0, 0);
+            padding : 30px;
+            border-radius: 5px;
+            display: none;
+        };
+
+        #button1 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-box" id="alertBox1">
+        <p>alert 박스 1</p>
+        <button onclick="closeAlert('alertBox1', 'showAlertbt1')">닫기</button>
+    </div>
+    <button id="showAlertbt1" onclick="showAlert('alertBox1', 'showAlertbt1', `로그인이 필요합니다`)">alert 박스 1</button>
+    
+    <div class="alert-box" id="alertBox2">
+        <p>alert 박스 2</p>
+        <button onclick="closeAlert('alertBox2', 'showAlertbt2')">닫기</button>
+    </div>
+    <button id="showAlertbt2" onclick="showAlert('alertBox2', 'showAlertbt2', `회원가입이 필요합니다`)">alert 박스 2</button>
+
+    <script>
+        function showAlert(alertBox, showAlertbt, message) {
+            document.getElementById(alertBox).style.display = 'block';
+            document.getElementById(showAlertbt).style.display = 'none';
+            document.getElementById(alertBox).getElementsByTagName('p')[0].innerHTML = message;
+        }
+
+        function closeAlert(alertBox, showAlertbt) {
+            document.getElementById(alertBox).style.display = 'none';
+            document.getElementById(showAlertbt).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

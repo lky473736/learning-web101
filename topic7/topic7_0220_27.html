@@ -1,0 +1,29 @@
+<!--
+    제이쿼리 (자바스크립트 편하게 만든 기능)
+    
+    - 자바스크립트의 라이브러리
+    - html 조작이 굉장히 편함
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4 id="test">안녕하세요</h4>
+    <h4 id="test2" style="color:red"></h4>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> <!--제이쿼리 라이브러리 선언-->
+    <!--선언은 head태그에서도 할 수 있는데 웹사이트 반응 속도가 매우 느려질 가능성이 있음. 따라서 body태그 맨 밑에 넣는게 베스트임-->
+
+    <script>
+        // document.getElementById('test').innerHTML = '안녕';
+        $('#test').html('안녕');
+        const a = $('#test').html(); // 안에 있는 내용 반환
+        $('#test2').html(a); 
+        $('#test2').css('color', 'blue');
+    </script>
+</body>
+</html>

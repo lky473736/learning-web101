@@ -1,0 +1,47 @@
+<!--
+    alert ui 디자인
+    - 미리 디자인해놓고 숨기기 (css로 display : none하면 됨)
+    - 버튼누르거나 하면 보여주기 (onclick)
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .alert-box {
+            background-color: rgb(212, 212, 212);
+            color: rgb(31, 31, 63);
+            padding: 20px;
+            border-radius : 5px;
+            display: none;
+        };
+    </style>
+</head>
+<body>
+    <div class="alert-box" id="alert-box">Alert 박스</div>
+
+    <!-- <button id="buttonAlert" onclick="저거 alert 박스를 보여주는 자바스크립트">경고버튼</button> -->
+    <button id="buttonAlert" onclick="alertBox()">경고창 생기기</button> <!--함수 사용한다-->
+    
+    <script>
+        function alertBox() {
+            let alertBox = document.getElementById('alert-box');
+            let button = document.getElementById('buttonAlert');
+            /* for (let i = 0; i < alertBoxes.length; i++) {
+                let alertBox = alertBoxes[i];
+                if (alertBox.style.display === 'none') {
+                    alertBox.style.display = 'block';
+                } else {
+                    alertBox.style.display = 'none';
+                }
+            } */
+            alertBox.style.display = (alertBox.style.display === 'none' ? 'block' : 'none');
+            button.innerHTML = (alertBox.style.display === 'none' ? '경고창 생기기' : '경고창 닫기');
+        }
+
+        // }, 1000);
+    </script>
+</body>
+</html>
