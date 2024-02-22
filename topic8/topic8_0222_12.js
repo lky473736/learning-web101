@@ -83,3 +83,26 @@ const oddList = numList.map((component) => {
 }).filter((element) => element !== undefined);
 // filter를 이용해 undefined를 걸러준다
 console.log(oddList);
+
+// join : 특정 배열을 문자열로 
+let a = [1, 2, 3, 4, 5];
+let b = [6, 7, 8, 9, 0];
+console.log(a.join()); // a를 전부 합쳐서 문자열로 만듦
+console.log(a.join(' ')); // 구분자
+
+// split : 특정 문자열을 배열로
+a = '1, 2, 3, 4, 5';
+console.log(a.split(' ,')); // 구분자
+
+// 배열인가, 아닌가를 하기 위해 isArray()
+let user = {
+    name : "lky", 
+    age : 21
+};
+
+let userInformation = Object.entries(user);
+console.log(typeof userInformation); // 객체라고 나옴. 따라서 배열인가를 조사하려면 isArray가 필요함
+
+if (Array.isArray(userInformation) === true) {
+    console.log ("userInformation은 배열");
+}
