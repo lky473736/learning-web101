@@ -1,5 +1,5 @@
 /*
-    async await 
+    async
 
     - promise의 then, catch, finally의 가독성을 더욱 좋게 만들어줄 수 있음
     - async : function앞에 async를 하면 promise를 반환한다
