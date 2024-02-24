@@ -5,6 +5,7 @@ NAVER CONNECT) learning web programming 101 (HTML, CSS, Javascript)
 NAVER 부스트코스를 수강합니다.  
 
 starting at : 1/1  
+ended at : 2/24
 
 ---------------------------------
 
