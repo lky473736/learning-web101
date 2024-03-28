@@ -1,0 +1,59 @@
+<!--
+    div : 웹브라우저의 모든 공간을 분할, 줄바꿈 있음, 옆에 html 요소 X (block 형식으로 분할)
+    span : 웹브라우저의 일부 공간을 분할, 줄바꿈 없음, 옆에 html 요소 O (inline 형식으로 분할)
+    inline-block : block과 inline의 중간 형태
+-->
+
+<!--
+    iframe : 한 페이지에 2개 이상의 html을 보여주는 것
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color : yellow;
+            text-align : center;
+        }
+
+        span {
+            background-color: red;
+            color : white;
+        }
+    </style>
+</head>
+<body>
+    <h3>div/span/iframe</h3>
+    <div>
+        <span>daramji</span>
+        <br>
+        daramji
+        <br>
+        <span>daramji</span>
+        <br>
+        daramji
+        <br>
+        <span>daramji</span>
+        <br>
+    </div>
+    <br>
+    <table>
+        <tr>
+            <td rowspan="2"><iframe src="week4_0328_7.html" width="300" height="400"></iframe></td>
+            <td><iframe src="week4_0328_9.html" width="300" height="200"></iframe></td>
+        </tr>
+        <tr>
+            <td><iframe src="week4_0328_8.html" width="300" height="200"></iframe></td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    
+    <iframe src="foriframe.html" name="if_a"></iframe>
+    <iframe src="foriframe.html" name="if_b"></iframe>
+</body>
+</html>

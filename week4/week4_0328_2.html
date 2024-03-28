@@ -1,0 +1,51 @@
+<!--배달의 민종 변형 : checkbox 및 radio-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <h3>배달의 민종</h3>
+    <fieldset>
+        <legend>주문서</legend>
+        <form action="server.jsp" method="get">
+            <p>
+                <label for="name">주문자 이름 :</label> <input type="password" name="name" id="name">
+            </p>
+            <p>
+                <label for="address">주소 :</label> <input type="text" name="address" id="address">
+            </p>
+            <p>
+                <label for="tel">연락처 :</label> <input type="tel" name="tel" id="tel" placeholder="010-0000-0000" required>
+            </p>
+            <fieldset>
+                <legend>주문 메뉴</legend>
+                <p>
+                    <label for="chinese">중식메뉴 :</label> 
+                    짬뽕 <input type="radio" name="chinese" id="jjambbong" value="jjambbong">
+                    짜장면 <input type="radio" name="chinese" id="jjajang" value="jjajang">
+                    볶음밥 <input type="radio" name="chinese" id="bbokembob"
+                    value="bbokembob">
+                </p>
+                <p>
+                    <label for="school">분식메뉴 :</label>
+                    김밥 <input type="checkbox" name="school" id="gimbob"
+                    value="gimbob">
+                    떡볶이 <input type="checkbox" name="school" id="ddeokboke" value="ddeokboke">
+                </p>
+            </fieldset>
+            <p>
+                요구사항 : <textarea name="detail" id="detail" cols="30" rows="10"></textarea>
+            </p>
+    
+            <button type="submit">제출하기</button>
+            <br>
+            <button type="reset">작성 내용 초기화</button>
+            <br>
+        </form>
+    </fieldset>
+</body>
+</html>
+

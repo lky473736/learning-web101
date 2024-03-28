@@ -1,0 +1,58 @@
+<!--
+    서버에게 데이터 전송 (get과 post의 차이 시험에 나옴)
+
+    1) form 형태의 html을 서버가 클라이언트에게 전송
+    2) 클라이언트는 html을 다운로드받는다
+    3) 다운로드받고 데이터를 작성하고 다시 서버에게 보낸다 (get, post)
+
+    get : URL parameter에 정보를 붙여서 전송 (서버로 전송할 수 있는 최대 글자 수 2048, 넘어가면 무시 / 보안에 취약)
+    post : HTTP Request 헤더에 parameter 붙여서 데이터 전송 (글자수 제한 없음 / 보안에 좋음)
+-->
+
+<!--
+    form 
+
+    action : 제출 후 이어지는 페이지의 상대 주소 (이어지는 페이지는 서버와 함께 동작하는 일종의 프로그램 (api))
+    method : get/post
+
+    action : page.jsp 
+    method : get
+    form 안에 name : username, password
+    
+    ex) http://gachon.ac.kr/page.jsp?username=~~&password=~~
+    (파라미터가 나오는 시작 지점에 "?")
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <h3>배달의 민종</h3>
+    <fieldset>
+        <legend>주문서</legend>
+        <form action="server.jsp" method="get">
+            <p>
+                <label for="name">주문자 이름 :</label> <input type="password" name="name" id="name">
+            </p>
+            <p>
+                <label for="address">주소 :</label> <input type="text" name="address" id="address">
+            </p>
+            <p>
+                <label for="tel">연락처 :</label> <input type="tel" name="tel" id="tel" placeholder="010-0000-0000" required>
+            </p>
+            <p>
+                <label for="menu">메뉴 :</label> <input type="text" name="menu" id="menu">
+            </p>
+            <p>
+                요구사항 : <textarea name="detail" id="detail" cols="30" rows="10"></textarea>
+            </p>
+    
+            <button type="submit">제출하기</button>
+        </form>
+    </fieldset>
+</body>
+</html>
+

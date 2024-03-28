@@ -1,0 +1,24 @@
+<!--
+    datalist : 텍스트 입력 시 자동완성 기능 제공
+    https://developer.mozilla.org/ko/docs/Web/HTML/Element/datalist
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    전공분야 : 
+    <form action="server.jsp" method="get">
+        <input type="text" list="major" id="major" name="major">
+        <datalist id="major">
+            <option value="computer">컴퓨터공학</option>
+            <option value="software">소프트웨어</option>
+            <option value="security">스마트보안</option>
+            <option value="ai">인공지능</option>
+        </datalist>
+    </form>
+</body>
+</html>
