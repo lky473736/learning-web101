@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1 {
+            color: blue;
+            background-color: yellow;
+            font-size: 14;
+        }
+
+        .c2 {
+            color: pink;
+            background-color: black;
+            font-size: 15;
+        }
+
+        #i1 {
+            color: green;
+            background-color: white;
+            font-size: 14;
+        }
+
+        #i2 {
+            color: pink;
+            background-color: black;
+            font-size: 15;
+        }
+    </style>
+</head>
+<body>
+    <b>bold</b>
+    <u>undeline</u>
+
+    <p class="c1">
+        <b>가천대학교</b>
+    </p>
+    <p class="c2">
+        <b>가천대학교</b>
+    </p>
+    <p class="c2" id="i1"> <!--p는 block이라 화면 끝까지 가로로, class보다 id가 우선순위가 크니 id로 적용됨-->
+        <u>가천대학교</u>
+    </p>
+    <u id="i2">가천대학교</u> <!--u는 inline이랑 특정 부분만-->
+
+    <!--스타일은 중첩이 가능하다-->
+</body>
+</html>
