@@ -44,6 +44,46 @@
             <td>수학과</td>
             <td>유재석</td>
         </tr>
-    </table>
+    </table>   
 </body>
 </html>
+
+<!--
+    테이블 태그이다. 테이블 태그는 기능이 많다.
+    table 태그로 감싸고, 그 안의 row들을 tr 태그로 표현한다.
+    이때, thead와 tbody를 이용하면 table의 key attribute를 표현해줄 수 있다.
+    또한 tr 태그 내에서 th, td를 사용할 수 있는데 각각은 component를 작성할 때 사용된다.
+    caption 태그는 table 위에 제목을 나타낼 수 있다.
+    colspan은 가로로 넓힌다. colspan 안에 가로로 얼만큼 넓힐건지 넣을 수 있다. 2는 지금을 포함하여 2개 넓힌다는 것이다.
+    rowspan은 세로로 넓힌다. 위와 같은 맥락이다.
+
+    예를 들어서,
+    <table border="1">
+        <caption>테이블</caption>
+        <thead>
+            <tr>
+                <td></td>
+                <th>이름</th>
+                <th>나이</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>다람쥐</td>
+                <td rowspan="2">3</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>고양이</td>
+            </tr>
+        </tbody>
+    </table>
+
+    위와 같이 구성한다면 아래와 같은 결과가 나올 것이다.
+
+            테이블
+        이름    나이
+    1   다람쥐  3 (rowspan)
+    2   고양이  (rowspan)
+-->

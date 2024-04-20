@@ -65,3 +65,19 @@
     <iframe src="foriframe.html" name="if_b"></iframe>
 </body>
 </html>
+
+<!--
+    iframe, div, span은 공간 분할 태그로, 한 웹페이지에 특정 공간을 분할하는 것이다. 공간을 분할할 수 있는 방법은 아래와 같이 3가지이다.
+
+    inline : 특정 영역을 의미하며, width, height값을 정할 수 없다.
+    block : 전체 페이지의 가장 왼쪽 영역부터 오른쪽 영역까지 모든 영역을 의미한다. width와 height를 지정 가능하다.
+    inline-block : inline과 block의 특성을 둘 다 가지고 있는 것이다.
+
+    inline의 대표적인 태그는 span, block의 대표적인 태그는 div이다.
+
+    iframe은 한 페이지에 2개 이상의 html 파일을 보여주고 싶을 때 사용되며, iframe을 잘 이용하면 한 페이지에 다양한 html 파일을 보여줄 수 있다.
+    iframe의 속성값으로는 src와 name, width, height값이 들어갈 수 있는데, src는 보여줄 html 파일의 절대경로, 상대경로를 의미하며, 이때 name은 target에 해당되는 이름을 지정해주는 것이다.
+    만약에 A라는 특정 웹페이지의 하이퍼링크가 있는 foriframe.html이라고 하는 html 파일을 if_a라고 하는 iframe에 src 속성값으로 부여해주었다고 가정하자.
+    이때 foriframe.html의 하이퍼링크에 target값은 if_b이다.
+    이때 name이 if_b라고 하는 iframe을 하나 더 만들었으면, if_a에서 하이퍼링크를 누르면 그 웹페이지는 if_b에서 보여지게 된다. 
+-->

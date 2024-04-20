@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .back li {
+        .back li { /* back 클래스의 후손인 li엔 전부 적용됨 */
             color : black;
             font-size : 30px;
         }
@@ -50,3 +50,11 @@
     </ul>
 </body>
 </html>
+
+<!--
+    조합 선택자는 3개만 알아두자.
+
+    후손 선택자 : A B : 선택자 B가 선택자 A에 포함되어 있을 경우
+    자손 선택자 : A > B : 직계 자손인 B에 적용
+    그룹 선택자 : 선택자 A, 선택자 B : A와 B 모두 선택
+-->

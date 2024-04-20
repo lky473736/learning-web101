@@ -12,7 +12,7 @@
 <body>
     전공분야 : 
     <form action="server.jsp" method="get">
-        <input type="text" list="major" id="major" name="major">
+        <input type="text" list="major" name="major">
         <datalist id="major">
             <option value="computer">컴퓨터공학</option>
             <option value="software">소프트웨어</option>
@@ -22,3 +22,11 @@
     </form>
 </body>
 </html>
+
+<!--
+    datalist는 select와 비슷한건데, 얘는 직접 입력하게 하며, 입력할 때 자동완성으로 특정 요소를 보여주게 해주는 태그이다.
+    input에 name, list를 부여하고, list 속성값으로 datalist에 id를 부여하여 작동된다.
+    datalist를 구성하는 요소는 전부 option으로, 아래와 같이 작성되면 daramji가 자동완성, daramji를 설명해주는 설명글이 "다람쥐" 가 된다.
+
+    <option value="daramji">다람쥐</option>
+-->
