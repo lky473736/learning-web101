@@ -1,0 +1,138 @@
+<!--
+    서버에게 데이터 전송 (get과 post의 차이 시험에 나옴)
+
+    1) form 형태의 html을 서버가 클라이언트에게 전송
+    2) 클라이언트는 html을 다운로드받는다
+    3) 다운로드받고 데이터를 작성하고 다시 서버에게 보낸다 (get, post)
+
+    get : URL parameter에 정보를 붙여서 전송 (서버로 전송할 수 있는 최대 글자 수 2048, 넘어가면 무시 / 보안에 취약)
+    post : HTTP Request 헤더에 parameter 붙여서 데이터 전송 (글자수 제한 없음 / 보안에 좋음)
+-->
+
+<!--
+    form 
+
+    action : 제출 후 이어지는 페이지의 상대 주소 (이어지는 페이지는 서버와 함께 동작하는 일종의 프로그램 (api))
+    method : get/post
+
+    action : page.jsp 
+    method : get
+    form 안에 name : username, password
+    
+    ex) http://gachon.ac.kr/page.jsp?username=~~&password=~~
+    (파라미터가 나오는 시작 지점에 "?")
+-->
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <h3>배달의 민종</h3>
+    <fieldset>
+        <legend>주문서</legend>
+        <form action="server.jsp" method="get">
+            <p>
+                <label for="name">주문자 이름 :</label> <input type="password" name="name" id="name">
+            </p>
+            <p>
+                <label for="address">주소 :</label> <input type="text" name="address" id="address">
+            </p>
+            <p>
+                <label for="tel">연락처 :</label> <input type="tel" name="tel" id="tel" placeholder="010-0000-0000" required>
+            </p>
+            <p>
+                <label for="menu">메뉴 :</label> <input type="text" name="menu" id="menu">
+            </p>
+            <p>
+                요구사항 : <textarea name="detail" id="detail" cols="30" rows="10"></textarea>
+            </p>
+    
+            <button type="submit">제출하기</button>
+        </form>
+    </fieldset>
+</body>
+</html> -->
+
+<!--
+    위에 정리해놨는데 내가 다시 한번 정리하자.
+
+    get 방식 : url 파라미터에 form의 input에 정의한 name = 입력값 형식으로 보여주는 것 (각 파라미터는 ?로 구분), 보안에 굉장히 취약 (왜냐면 사용자가 입력한 값을 그대로 보여주니깐), 최대 글자수 2048, 넘어가면 무시함
+    post 방식 : HTTP Request 헤더에 parameter 붙여서 데이터 전송 (글자수 제한 없음 / 보안에 좋음)
+
+    form 태그를 열 때 속성은 action과 method이다. action에는 form이 submit되고 난 뒤에 실행되는 프로그램의 이름을 적고, method에는 서버에게 보낼 방식을 적는다. (post, get, delete, update (rest api 양식에서))
+
+    예를 들어 아래와 같이 작성하면,
+
+    <form action="server.jsp" method="get">
+        <input type="text" name="text" placeholder="입력하세요">
+        <button type="submit">제출하기</button>
+    </form>
+
+    이러면 제출 시에, 현재 base가 http://www.mysite.com이라고 가정하고, text input 창에 "daramji"라고 입력하였다고 또한 가정한다면,
+    get method이기 때문에 제출하기 버튼을 누를 시,
+
+    http://www.mysite.com/server.jsp?text=daramji
+
+    이런 형식으로 이동된다. url parameter 사이에는 &로 연결된다.
+-->
+
+<html>
+<head>
+</head>
+<body>
+    <img src="https://velog.velcdn.com/images%2Fyujinoneill%2Fpost%2F120515b4-d238-4923-b2d4-bf1c1f80b37a%2F%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%ED%8F%BC.png" alt="폼연습" width="200px">
+
+    <hr>
+
+    <form action="server.jsp" method="GET">
+        <p>
+            <label for="firstname">First name :</label>
+            <br>
+            <input type="text" name="firstname" id="firstname">
+        </p>
+        <p>
+            <label for="lastname">Last name :</label>
+            <br>
+            <input type="text" name="lastname" id="lastname">
+        </p>
+        <p>
+            <label for="email">Email :</label>
+            <br>
+            <input type="email" name="email" id="email">
+        </p>
+        <p>
+            <label for="gender">Gender :</label>
+            <input type="radio" name="gender" value="male" id="male"> <label for="male">Male</label>
+            <input type="radio" name="gender" value="female" id="female"> <label for="female">Female</label>
+        </p>
+        <p>
+            <label for="favorite">Favorite :</label>
+            <input type="checkbox" name="favorite" value="html" id="html"> <label for="html">HTML</label>
+            <input type="checkbox" name="favorite" value="css" id="css"> <label for="css">CSS</label>
+            <input type="checkbox" name="favorite" value="python" id="python"> <label for="python">Python</label>
+        </p>
+        <p>
+            <label for="university">University :</label>
+            <input type="text" name="university" id="university" list="univ">
+            <datalist id="univ" name="univ">
+                <option value="gachon">가천대학교</option>
+                <option value="seoul natn">서울대학교</option>
+                <option value="seoul">서울시립대학교</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="date">Date :</label>
+            <input type="date" name="date" id="date">
+        </p>
+        <p>
+            <textarea name="etc" id="etc" cols="30" rows="10">Text Anything!</textarea>
+        </p>
+
+        <button type="submit">Registration</button>
+    </form>
+</body>
+</html>
+

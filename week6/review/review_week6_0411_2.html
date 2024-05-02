@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        a:link { /* 방문 안했을 때 */
+            color : blue;
+            text-decoration : underline;
+        }
+        a:visited{ /* 방문했을 때 */
+            color : red;
+        }
+        a:hover{ /* 마우스에 가져다 대었을 때 */
+            text-decoration : overline;
+        }
+        a:active{ /* 클릭할 때 */
+            background-color : yellow;
+        }
+    </style>
+</head>
+<body>
+    <h3><a href="http://google.com">daramji</a></h3>
+</body>
+</html>
+
+<!--
+    가상 선택자이다.
+
+    ~:hover : 마우스를 올려놓을 때
+    ~:active : 마우스로 클릭할 때
+    ~:visited : 방문한 사이트일 때 (a태그랑 같이 사용)
+    ~:link : 방문하지 않은 사이트일 때 (a태그랑 같이 사용)
+-->

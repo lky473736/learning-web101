@@ -1,0 +1,54 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> -->
+    <!--
+        _blank : 새로운 웹 브라우저 창에 염
+        _self : 현재 웹 브라우저 창에 염 (기본설정)
+        blank랑 self가 가장 많이 사용됨
+    -->
+    <!-- <h1 style="text-align:center">하이퍼텍스트 target 속성</h1>
+    <div style="text-align:center; font-size : 25px">
+        <mark>blank</mark> : <a href="http://daum.net" target="_blank">daum</a>
+        <br>
+        <mark>self</mark> : <a href="http://daum.net" target="_self">daum</a>
+        <br>
+        parent : <a href="http://daum.net" target="_parent">daum</a>
+        <br>
+        top : <a href="http://daum.net" target="_top">daum</a>
+    </div>
+</body>
+</html> -->
+
+<!--
+    a 태그들의 attribute인 "target"을 정리하자.
+
+    가장 중요한 attribute는 _blank와 _self이다.
+    _blank : 현재 페이지가 아닌 다른 웹페이지에 하이퍼링크를 보여준다. 
+    _self : 현재 페이지에 바로 하이퍼링크를 보여준다. 이게 기본 설정이다.
+
+    그 다음에 중요한 attribute는 _parent와 _top인데 솔직히 현업에서 얘를 쓴 곳을 본 적이 없다.
+    _parent : 부모 웹 브라우저 페이지에 보여준다.
+    _top : 웹 브라우저의 전체 영역에 연다.
+
+    그냥 _parent와 _top의 정의는 외우고, _blank, _self는 많이 사용하니 알아두는 것이 좋겠다.
+-->
+
+<html>
+<head>
+</head>
+<body>
+    <a href="http://gachon.ac.kr" target="_blank">가천대학교 (다른 페이지에서 열림)</a>
+    <br>
+    <a href="http://gachon.ac.kr" target="_self">가천대학교 (현재 페이지에서 열림)</a>
+    <dl>
+        <dt><mark>_parent</mark></dt>
+        <dd>부모 페이지에서 열린다.</dd>
+        <dt><mark>_top</mark></dt>
+        <dd>웹 브라우저의 전체 페이지에서 열린다.</dd>
+    </dl>
+</body>
+</html>

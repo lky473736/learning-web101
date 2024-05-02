@@ -1,0 +1,149 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> -->
+    <!--
+        표
+
+        th : 속성행
+        tr : tuple
+        td : component
+
+        rowspan : 열확장 (세로)
+        colspan : 행확장 (가로)
+    -->
+
+    <!-- <table border="5" style="width:30%">
+        <caption>
+            테이블 예제
+        </caption>
+        <tr>
+            <th></th>
+            <th>학과</th>
+            <th>이름</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td rowspan="2">컴퓨터</td>
+            <td>홍길동</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>김명신</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>스마트보안</td>
+            <td>강호동</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>수학과</td>
+            <td>유재석</td>
+        </tr>
+    </table>   
+</body>
+</html> -->
+
+<!--
+    테이블 태그이다. 테이블 태그는 기능이 많다.
+    table 태그로 감싸고, 그 안의 row들을 tr 태그로 표현한다.
+    이때, thead와 tbody를 이용하면 table의 key attribute를 표현해줄 수 있다.
+    또한 tr 태그 내에서 th, td를 사용할 수 있는데 각각은 component를 작성할 때 사용된다.
+    caption 태그는 table 위에 제목을 나타낼 수 있다.
+    colspan은 가로로 넓힌다. colspan 안에 가로로 얼만큼 넓힐건지 넣을 수 있다. 2는 지금을 포함하여 2개 넓힌다는 것이다.
+    rowspan은 세로로 넓힌다. 위와 같은 맥락이다.
+
+    예를 들어서,
+    <table border="1">
+        <caption>테이블</caption>
+        <thead>
+            <tr>
+                <td></td>
+                <th>이름</th>
+                <th>나이</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>다람쥐</td>
+                <td rowspan="2">3</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>고양이</td>
+            </tr>
+        </tbody>
+    </table>
+
+    위와 같이 구성한다면 아래와 같은 결과가 나올 것이다.
+
+            테이블
+        이름    나이
+    1   다람쥐  3 (rowspan)
+    2   고양이  (rowspan)
+-->
+
+<html>
+<head>
+</head>
+<body>
+    <h3 style="text-align:center">2018년 2학기 수강 과목</h3>
+
+    <table border="1">
+        <caption>한국 한빛 대학교</caption>
+        <thead>
+            <tr>
+                <th>학점</th>
+                <th>과목</th>
+                <th>담당 교수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>3학점</td>
+                <td>데이터베이스</td>
+                <td>김우민</td>
+            </tr>
+
+            <tr>
+                <td>4학점</td>
+                <td>웹 프로그래밍</td>
+                <td>홍성용</td>
+            </tr>
+
+            <tr>
+                <td>3학점</td>
+                <td>자료구조</td>
+                <td>박민아</td>
+            </tr>
+
+            <tr>
+                <td>2학점</td>
+                <td>컴퓨터 프로그래밍</td>
+                <td>최민수</td>
+            </tr>
+
+            <tr>
+                <td>3학점</td>
+                <td>컴퓨터 그래픽</td>
+                <td>이정자</td>
+            </tr>
+
+            <tr>
+                <td>3학점</td>
+                <td>빅 데이터</td>
+                <td>홍민성</td>
+            </tr>
+
+            <tr>
+                <td colspan="3">2018년 2학기 총 신청 학점은 18학점입니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!--
+    class : 여러 개에 포괄적인 스타일을 적용하기 위해 만듦. 유일성 X
+    id : 특정 요소에 특정 스타일을 적용하기 위해 만듦. 유일성 O
+    (우선순위 : class < id / id는 자바스크립트와 연동)
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .back li { /* back 클래스의 후손인 li엔 전부 적용됨 */
+            color : black;
+            font-size : 30px;
+        }
+
+        #caffine {
+            background-color: yellow;
+        }
+
+        #decaffine {
+            background-color: blue;
+        }
+
+        #dessart {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul class="back">
+        <li id="caffine">카페인</li>
+        <ul>
+            <li>아메리카노</li>
+            <li>카페라떼</li>
+        </ul>
+
+        <li id="decaffine">논카페인</li>
+        <ul>
+            <li>밀크티</li>
+            <li>달고나라떼</li>
+        </ul>
+
+        <li id="dessart">디저트</li>
+        <ul>
+            <li>계란빵</li>
+            <li>타르타르빵</li>
+        </ul>
+    </ul>
+</body>
+</html>
+
+<!--
+    조합 선택자는 3개만 알아두자.
+
+    후손 선택자 : A B : 선택자 B가 선택자 A에 포함되어 있을 경우
+    자손 선택자 : A > B : 직계 자손인 B에 적용
+    그룹 선택자 : 선택자 A, 선택자 B : A와 B 모두 선택
+-->

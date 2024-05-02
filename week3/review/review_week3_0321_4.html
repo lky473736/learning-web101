@@ -1,0 +1,132 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size : 20px
+        }
+    </style>
+</head>
+<body> -->
+    <!--
+        순서 없는 리스트 : ul
+        순서 있는 리스트 : ol
+        정의 리스트 : dl
+
+        리스트는 nested 할 수 있다
+        리스트의 기호를 변경할 수 있다
+    -->
+
+    <!-- <h3>리스트</h3>
+    <ol type="I">
+        <li>가천대학교
+            <ul style="list-style-type:disc">
+                <li>it융합대학
+                    <ul>
+                        <li>컴퓨터공학부
+                            <ul>
+                                <li>컴퓨터공학전공</li>
+                                <li>스마트보안전공</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>반도체대학
+                    <ul>
+                        <li>반도체-전자공학부
+                            <ul>
+                                <li>전자공학전공</li>
+                                <li>반도체공학전공</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>인천대학교
+        </li>
+        <li>경기대학교
+        </li>
+    </ol>
+
+    <hr>
+
+    <dl>
+        <dt>가천대학교</dt>
+        <dd>성남에 위치한 종합대학</dd>
+    </dl>
+</body>
+</html> -->
+
+<!--
+    리스트이다. 리스트의 종류는 ol, ul, dl이 있으며, 각각 쓰임새는 다르다.
+    ol은 순서가 있는 리스트이며, 각 리스트의 컴포넌트들은 li 태그로 작성한다.
+    ul은 순서가 없는 리스트이며, 각 리스트의 컴포넌트들은 li 태그로 작성한다.
+    dl은 정의 리스트이며, 이름은 dt, 그것에 관한 설명은 dd 태그로 작성한다.
+
+    ol은 style값을 지정해주어서 list-style-type property를 이용해 인덱스 기호를 변경해줄 수 있다.
+    ul은 type값을 지정해주어서 인덱스 기호를 변경해줄 수 있다.
+
+    리스트는 중복이 가능하다. 예시를 들자면,
+
+    <ol>
+        <li>daramji
+            <ul>
+                <li>cute</li>
+                <li>animal</li>
+            </ul>
+        </li>
+
+        <li>dedenne
+            <ul>
+                <li>electric type</li>
+            </ul>
+        </li>
+    </ol>
+
+    이러면 아래와 같이 보여질 것이다.
+
+    1. daramji
+        - cute
+        - animal
+
+    2. dedenne
+        - electric type
+-->
+
+<html>
+<head>
+</head>
+<body>
+    <h3>요구사항 베이스라인</h3>
+    <ol>
+        <li>기능적 요구사항
+            <ul>
+                <li>소프트웨어의 실질적 기능과 사용자의 요구사항과 연관이 되어있는 개념</li>
+                <li>소프트웨어 구성에서 가장 중요한 요구사항임</li>
+                <ul>
+                    <li>데이터 : 입력 데이터와 출력 데이터는 무엇이며, 데이터의 형식은 무엇인가?</li>
+                    <li>사용자 : 본 프로그램을 사용하는 사용자는 누구이며, 본 프로그램의 대상자가 명확한가?</li>
+                    <li>기능성 : 본 프로그램이 사용자에게 제공해야 하는 것은 무엇인가?</li>
+                </ul>
+            </ul>
+        </li>
+        <li>비기능적 요구사항
+            <ul>
+                <li>문화 요구사항 : 한/영 지원, 날짜 양식 지원</li>
+                <li>자원 요구사항 : 최소한의 메모리 지원, 다양한 하드웨어 지원</li>
+                <li>성능 요구사항 : 응답시간은 1초 이내, DB 실시간 업데이트</li>
+                <li>보안 요구사항 : 사용자별 접근권한 제한</li>
+                <li>운영 요구사항 : OS 지원 다양화, 문서 양식에 제한받지 않아야 함</li>
+            </ul>
+        </li>
+        <li>인터페이스 요구사항
+            <ul>
+                <li>지원 인터페이스에 따른 요구사항 (표준)</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>

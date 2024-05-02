@@ -1,0 +1,39 @@
+<!-- base 태그를 head에 넣어서 현재 경로를 지정하자 -->
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="http://github.com"> <!-- 여기부터 현재 경로 -->
+<!-- </head>
+<body>
+    <a href="./lky473736">깃헙</a>
+</body>
+</html> --> 
+
+<!--
+    a 태그의 상대경로 URL 지정 시 현재 위치를 지정해줄 수 있는데, 이거는 head 태그 안에서 base 태그의 href 속성에서 지정해준다.
+    예를 들어서, 아래와 같이 지정해주면 어디로 하이퍼링크가 연결되는 것일까?
+
+    <head>
+        <base href="http://www.github.com">
+    </head>
+    <body>
+        <a href="./lky473736">내 깃헙</a>
+    </body>
+
+    위와 같이 되면 현재 위치가 base 태그의 href로 지정되고, 
+    a 태그는 현재 위치에서 저 라우터만 작성해주면 되는 것임이다.
+-->
+
+<html>
+<head>
+    <base href="http://">
+    <!--이러면 작동되지 않는다. 항상 base에는 라우터 이전까지는 전부 작성해주어야 한다.-->
+</head>
+<body>
+    <a href="./www.daum.net" target="_blank">다음</a>
+    <a href="./www.naver.com" target="_blank">네이버</a>
+</body>
+</html>
