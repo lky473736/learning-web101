@@ -1,0 +1,22 @@
+<head>
+    <style> 
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: colorbox 5s infinite;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes colorbox {
+            from { background: red; left: 0px; top: 0px; }
+            25% { background: orange; left: 300px; top: 0px; }
+            50% { background: yellow; left: 300px; top: 300px; }
+            75% { background: green; left: 0px; top: 300px; }
+            to {background: red; left: 0px; top: 0px; }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
