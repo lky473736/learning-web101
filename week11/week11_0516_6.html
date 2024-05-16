@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1 {
+            position : relative;
+            width : 150px;
+            height : 150px;
+
+            background-color: grey;
+            color : white;
+            text-align : center;
+            
+            animation : 2s rainbow_move 5s linear infinite alternate;
+        }
+
+        /*
+        @keyframes rainbow_move {
+            from { left : 100px; background-color: red; }
+            15% { left : 75px; background-color: orange; } 
+            30% { left : 50px; background-color: yellow; }
+            45% { left : 25px; background-color: green; }
+            60% { left : 50px; background-color: blue; }
+            75% { left : 25px; background-color: navy;}
+            to { left : 0px; background-color: purple;}
+        } */
+
+        @keyframes rainbow_move {
+            from { left : 75px; background-color: red; }
+            15% { left : 50px; background-color: orange; } 
+            30% { left : 25px; background-color: yellow; }
+            45% { left : 0px; background-color: green; }
+            60% { left : 25px; background-color: blue; }
+            75% { left : 50px; background-color: navy;}
+            to { left : 75px; background-color: purple;}
+        }
+    </style>
+</head>
+<body>
+    <div class="c1">5초 후에 시작됨</div>
+</body>
+</html>

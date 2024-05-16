@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> 
+        @keyframes bounce {
+            from, to {
+                bottom: 100px;
+                animation-timing-function: ease-out;
+            }
+            50% {
+                bottom: 200px; 
+                animation-timing-function: ease-in;
+            }
+        }
+        div {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+            bottom: 100px; 
+        }
+        .b1 { 
+            left: 10px;
+            background: red;
+            animation-duration: 2s;     
+        }
+    </style>
+</head>
+<body>
+    <div class="b1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPFCtkhkaWpDn_wZX_u3ytyiOjgxpbpLge4694H3pCBA&s" alt="emblem"></div>
+</body>
+</html>

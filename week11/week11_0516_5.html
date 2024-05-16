@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position : relative;
+            width : 100px;
+            height : 100px;
+            background-color: yellow;
+            animation : move 3s linear infinite;
+
+            text-align : center;
+        }
+
+        @keyframes move {
+            from {left : 0px;}
+            25% {left : 75px;}
+            50% {left : 150px;}
+            100% {left : 500px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">기차</div>
+</body>
+</html>
