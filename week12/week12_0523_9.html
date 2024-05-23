@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 1;
+        var sum = 0;
+
+        var result = '';
+
+        while (x * 3 <= 100) {
+            if (x % 3 != 0) {
+                continue;
+            }
+
+            sum += x * 3;
+            result.concat(x.toString() + " ");
+
+            x++;
+        }
+
+        document.write ("1부터 100까지 수 중 3의 배수의 합은 ", sum);
+    </script>
+</body>
+</html>

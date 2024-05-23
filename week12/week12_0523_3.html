@@ -1,0 +1,85 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> -->
+    <!-- <label for="userid"><b>주민등록 7자리를 입력하시오. : </b></label> <input type="text" id="userid"> -->
+
+    <!--
+    <script>
+        var userid;
+        userid = prompt("주민등록 7자리를 입력하세요. : ");
+
+        var birthYear = Number(userid[0].concat(userid[1]));
+        // alert (birthYear);
+
+        /* 
+        if (!(4 < birthYear <= 24) || (0 <= birthYear <= 4) || (25 <= birthYear <= 99)) {
+            // alart("당신은 성년입니다.");
+            document.write ("당신은 성년입니다.");
+        } */
+
+        var after00;
+
+        if (Number(userid.slice(0, 5)) > 99000) {
+            after00 = Number(userid.slice(0, 5)) + 100000;
+        }
+
+        else {
+            if (userid[6] == '3') { 
+                // alert ("당신은 미성년 남성입니다.");
+                document.write ("당신은 미성년 남성입니다.");
+            }
+
+            else {
+                // alert ("당신은 미성년 여성입니다.")
+                document.write ("당신은 미성년 여성입니다.");
+            }
+        } 
+    </script>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>주민등록번호 판단</title>
+    <script>
+        function checkResidentNumber() {
+            let residentNumber = prompt("주민등록 7자리를 입력하세요:");
+            if (residentNumber.length !== 7) {
+                alert("올바른 7자리 주민등록번호를 입력하세요.");
+                return;
+            }
+
+            let birth = parseInt(residentNumber.substring(0, 6));
+            let genderCode = parseInt(residentNumber.charAt(6));
+            let birthYear;
+            let gender;
+
+            // 출생 연도 판단
+            if (birth > 990000) {
+                birthYear = 1900 + parseInt(residentNumber.substring(0, 2));
+            } else {
+                birthYear = 2000 + parseInt(residentNumber.substring(0, 2));
+            }
+
+            // 성별 판단
+            if (genderCode % 2 === 1) {
+                gender = "남성";
+            } else {
+                gender = "여성";
+            }
+
+            // 결과 출력
+            document.write("출생 연도: " + birthYear + "<br>");
+            document.write("성별: " + gender);
+        }
+    </script>
+</head>
+<body onload="checkResidentNumber()">
+</body>
+</html>

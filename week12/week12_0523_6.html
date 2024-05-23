@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var day = prompt("요일을 입력하세요. : ");
+        document.write ("요일은 ", day);
+
+        if (day == "토" || day == "일") {
+            // document.write ("<img src='https://images.unsplash.com/photo-1575361204480-aadea25e6e68?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D' src='축구'>");
+            location.href = "week12_0523_7.html";
+        }
+
+        else {
+            if (day === "수") {
+                // document.write ("<img src='https://lh3.googleusercontent.com/proxy/TqCMXt_bAhujLNnAFCxkfPepzpSgu-nCI3o5dDQ1v6Gm87CDbjMc5lzjXJq9GzQ4JofJZU7-RvXv5gBvxOXOd8wmZNYKUXs83F3uviIs5r4O-GdLwQ' src='장미'>")
+                location.href = "week12_0523_8.html";
+            }
+
+            else {
+                alert ("다른 요일을 입력하였거나, 형식에 맞지 않습니다.");
+            }
+        }
+    </script>
+</body>
+</html>
