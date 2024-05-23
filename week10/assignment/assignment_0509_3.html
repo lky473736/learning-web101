@@ -1,0 +1,54 @@
+<!--
+    과제 3.
+    8-26을 변경
+    - 클래스 연산자로 변경
+    - normal, alternate를 사용하여 동일한 결과가 나오도록 나머지 수정
+
+    202334734 컴퓨터공학전공 임규연
+-->
+
+<html>
+<head>
+    <style> 
+        div {
+            width: 150px;
+            height: 50px;
+            border: 1px solid black;
+            position: relative;
+            animation: boxmove 5s linear infinite;
+            text-align : center;
+        }
+        .box1 { 
+            background: red;
+            color : white;
+            animation-delay: 3s; 
+            animation-direction: normal;  
+        }
+        .box2 { 
+            background: blue;
+            color : white;
+            animation-delay: 5s; 
+            animation-direction: alternate;
+        }
+        @keyframes boxmove {
+            from { left: 300px; }
+            to { left: 0px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">애니메이션 박스 1</div>
+    <div class="box2">애니메이션 박스 2</div>
+
+    <br>
+    <br>
+    <hr>
+    <h3>과제 03</h3>
+    <h4>202334734 컴퓨터공학전공 임규연</h4>
+    <p>
+        8-26을 변경 <br>
+        - 클래스 연산자로 변경 <br>
+        - normal, alternate를 사용하여 동일한 결과가 나오도록 나머지 수정
+    </p>
+</body>
+</html>

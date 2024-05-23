@@ -1,0 +1,93 @@
+<!--
+    과제 1. 
+    8-32 예제를 변경
+    - 좌우로 움직이도록
+    - 이동속도는 위에서 아래로 순차적으로 점차 빠르게
+
+    202334734 컴퓨터공학전공 임규연
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        @keyframes bounce {
+            from, to {
+                left : 0px;
+                animation-timing-function : ease-out;
+            }
+            50% {
+                left : 200px;
+                animation-timing-function : ease-in;
+            }
+        }
+
+        div {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+        }
+
+        .ball1 { 
+            top : 10px;
+            background: red;
+            animation-duration: 5s;      
+        }
+
+        .ball2 { 
+            top : 50px;
+            background: blue;
+            animation-duration: 4s;      
+        }
+
+        .ball3 { 
+            top : 90px;
+            background: green;
+            animation-duration: 3s;      
+        }
+
+        .ball4 { 
+            top : 130px;
+            background: silver;
+            animation-duration: 2s;      
+        }
+
+        .ball5 { 
+            top : 170px;
+            background: black;
+            animation-duration: 1s;      
+        }
+    </style>
+</head>
+<body>
+    <div class="ball1"></div>
+    <div class="ball2"></div>
+    <div class="ball3"></div>
+    <div class="ball4"></div>
+    <div class="ball5"></div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <hr>
+
+    <h3>과제 01</h3>
+    <h4>202334734 컴퓨터공학전공 임규연</h4>
+    <p>
+        8-32 예제를 변경 <br>
+        - 좌우로 움직이도록 <br>
+        - 이동속도는 위에서 아래로 순차적으로 점차 빠르게 <br>
+    </p>
+</body>
+</html>

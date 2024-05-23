@@ -1,0 +1,64 @@
+<!--
+    과제 2.
+    8-30을 변경
+    - 처음에 반쯤 왔다가, 두번째 만나도록 변경할 것
+
+    202334734 컴퓨터공학전공 임규연
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style> 
+        div {
+            width: 100px; 
+            height: 100px;
+            position: absolute;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+
+        #div1 {
+            background-color: blue;
+            animation-direction: alternate;
+            animation-name: L-box;
+        }
+
+        #div2 {
+            background-color: yellow;
+            animation-direction: alternate-reverse;
+            animation-name: R-box;
+        }
+
+        @keyframes L-box {
+            0%, 100% { left: 0px; }
+            50% { left: 200px; }
+        }
+
+        @keyframes R-box {
+            0%, 100% { left: 400px; }
+            50% { left: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">왼쪽 박스</div>
+    <div id="div2">오른쪽 박스</div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+
+    <h3>과제 02</h3>
+    <h4>202334734 컴퓨터공학전공 임규연</h4>
+    <p>
+        8-30을 변경 <br>
+        - 처음에 반쯤 왔다가, 두번째 만나도록 변경할 것
+    </p>
+</body>
+</html>
