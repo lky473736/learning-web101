@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1 = Number(prompt("num1? : "));
+        var num2 = Number(prompt("num2? : "));
+
+        function sum(num1, num2) {
+            var sum = 0;
+
+            for (let i = num1; i <= num2; i++) {
+                sum = sum + i;
+            }
+            
+            return sum;
+        }
+
+        document.write (sum(num1, num2));
+    </script>
+ 
+    <!---
+    <form action="get">
+        학번 : <input type="text" name="numb" id="numb">
+        이름 : <input type="text" name="name" id="name">
+        <br>
+        <button type="button" onclick="printInfo()">출력</button>
+    </form>
+    -->
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+
+        for (let i = 0; i < 100; i++) {
+            arr[i] = i+1;
+        }
+
+        function printArr() {
+            for (let i = 0; i < 100; i++) {
+                document.write (`${arr[i]} `);
+            }
+
+            document.write("<a href=``>돌아가기</a>")
+        }
+
+        function initializeArr () {
+            for (let i = 0; i < 100; i++) {
+                arr[i] = 0;
+            }
+            document.write("<a href=``>돌아가기</a>")
+        }
+
+        function printSum() {
+            var sum = 0;
+
+            for (let i = 0; i < 100; i++) {
+                sum += arr[i];
+            }
+
+            document.write (sum);
+            document.write("<button><a href=``>돌아가기</a></button>")
+        }
+    </script>
+    <button type="button" onclick="initializeArr()">배열 초기화</button>
+    <button type="button" onclick="printArr()">배열 출력</button>
+    <button type="button" onclick="printSum()">배열 합계</button>
+</body>
+</html>

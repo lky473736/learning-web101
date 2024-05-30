@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ind = 0;
+        var arr = [];
+        var sum = 0;
+
+        while (true) {
+            var num = Number(prompt("숫자를 입력하시오"));
+            
+            if (num == -999) {
+                break;
+            }
+
+            arr[ind++] = num;
+            sum += num;
+        }
+
+        function print () {
+            document.write ("배열 : ", arr);
+            document.write ("<br>배열의 크기 : ", arr.length);
+            document.write ("<br>배열의 총합 : ", sum);
+            document.write ("<br>배열의 평균 : ", sum / arr.length)
+        }
+
+        print()
+    </script>
+</body>
+</html>
