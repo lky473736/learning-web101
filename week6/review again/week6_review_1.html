@@ -1,0 +1,48 @@
+<!--
+    6주차 리뷰 1. 우선순위 결정하기
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            background-color: green;
+        }
+
+        span#id1 {
+            background-color: yellow;
+        }
+
+        span.c1#id1 {
+            background-color: blue;
+        }
+
+        .c1, .c2 {
+            background-color: gray;
+        }
+
+        div {
+            background-color: orange;
+        }
+
+        .c3#id1 {
+            background-color: red;
+        }
+
+        div.c4 {
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <span>span 0</span>
+    <span class="c1" id="id1">span 1</span>
+    <span class="c2">span 2</span>
+    <div>div 0</div>
+    <div class="c3" id="id1">div 1</div>
+    <div class="c4">div 2</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!--
+    7주차 리뷰 3. z-index 연습
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border : 1px solid black;
+            width : 100px;
+            height : 100px;
+            text-align : center;
+        }
+
+        #id1 {
+            position : absolute;
+        }
+
+        #id2 {
+            position : absolute;
+            left : 80px;
+        }
+
+        #id3 {
+            position : absolute;
+            left : 160px;
+        }
+
+        #id4 {
+            position : absolute;
+            left : 240px;
+        }
+
+        #id5 {
+            position : absolute;
+            left : 320px;
+        }
+
+        .odd {
+            background-color: green;
+            z-index : 0;
+        }
+
+        .even {
+            background-color: yellow;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="odd" id="id1">1</div>
+    <div class="even" id="id2">2</div>
+    <div class="odd" id="id3">3</div>
+    <div class="even" id="id4">4</div>
+    <div class="odd" id="id5">5</div>
+</body>
+</html>

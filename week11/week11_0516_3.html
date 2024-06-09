@@ -4,11 +4,11 @@
     <style> 
         @keyframes bounce {
             from, to {
-                bottom: 100px;
+                bottom: 300px;
                 animation-timing-function: ease-out;
             }
             50% {
-                bottom: 200px; 
+                bottom: 700px; 
                 animation-timing-function: ease-in;
             }
         }
@@ -17,8 +17,7 @@
             width: 20px;
             height: 20px;
             border-radius: 10px;
-            animation-name: bounce;
-            animation-iteration-count: infinite;
+            animation : bounce infinite;
             bottom: 100px; 
         }
         .b1 { 
@@ -32,3 +31,15 @@
     <div class="b1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPFCtkhkaWpDn_wZX_u3ytyiOjgxpbpLge4694H3pCBA&s" alt="emblem"></div>
 </body>
 </html>
+
+<!--
+    사용자 지정 애니메이션을 이용하여 bounce를 구현하였다.
+    from과 to를 한꺼번에 지정하였고, 속성 중간에 animation-timing-function을 넣었다.
+    animation-timing-function은 애니메이션의 시작과 끝 타이밍을 지정할 수 있다.
+    예를 들어 현재 from, to할 때는 ease-out (점점 빠르게), 
+    50%으로 가면서 ease-in(점점 느리게) 속성값을 부여하여 튀는 효과를 극대화한 것으로 보인다.
+
+    div에 역시나 keyframes을 사용하기 위하여 animation 값을 넣어주어 keyframes의 이름, 그리고 keyframes가 몇번이나 반복될지를 넣어놨다. 
+
+    b1에는 animation-duration을 넣어서 animation이 작동되는 시간을 넣어주었다.
+-->

@@ -1,0 +1,39 @@
+<!--
+    9주차 리뷰 1. opacity를 animation으로 구현
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes move {
+            from {
+                opacity: 1;
+                left : 0px;
+            }
+
+            50% {
+                opacity : 0.5;
+                left : 100px;
+            }
+
+            to {
+                opacity : 0;
+                left : 200px;
+            }
+        }
+        div {
+            width : 100px;
+            height : 100px;
+            position : absolute;
+            background-color: black;
+            animation : move 1s linear infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

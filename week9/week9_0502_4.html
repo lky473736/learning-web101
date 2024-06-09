@@ -18,6 +18,12 @@
         }
 
         .c2 {
+            color : blue;
+            background-color: yellow;
+            width : 200px;
+            height : 100px;
+            border : 1px solid black;
+            text-align : center;
             display : inline;
         }
     </style>
@@ -34,3 +40,18 @@
     <div class="c2">가천대학교</div>
 </body>
 </html>
+
+<!--
+    inline 형식과 block 형식이 있다고 한 것은 저번 중간고사 범위에서도 나왔다. 잠깐 정리해보자면...
+    inline : 브라우저의 특정 영역을 지칭, width와 height값을 조정할 수 없음, span
+    block : 브라우저의 전체 가로를 지칭, width와 height값을 조정할 수 있음, div
+
+    하지만 이게 다 쓸모가 없는게, 그냥 display 속성을 이용하여 inline으로, block으로 조정이 가능하다. 
+    예를 들어서 위 코드를 분석해보자.
+
+    현재 body에는 c1 가천대학교 3개와 c2 가천대학교 3개이고, 각각은 div 태그에 둘러싸여 있으므로 block이다.
+    하지만 c1은 세로로 가천대학교가 놓여져 있고, c2는 inline 형식으로 가천대학교가 놓여져 있다.
+    c2는 현재 display 속성이 없기 때문에 div의 기본값인 block 형식이 적용된 것이다. 세로로 긴 형태인 이유는 padding 값이나 height값을 조정했기 때문이다.
+
+    c1은 display 속성을 주어 inline으로 바꾸었다. 그러니 width와 height가 적용되지 않고 일렬로 나열된 inline 형식으로 form-change한 것이다.
+-->

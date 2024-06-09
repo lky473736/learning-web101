@@ -20,3 +20,25 @@
 <body>
     <div></div>
 </body>
+
+<!--
+    애니메이션을 부여하고 있다. keyframe을 통하여 특정 요소의 움직임을 처리할 수 있게 된다.
+    먼저 @keyframs <애니메이션명>을 입력 후에 from (시작위치, 속성), to (동작의 끝 위치, 속성) 가운데에 각 움직임이 발생되는 %을 설정한다.
+
+    위의 코드는 위치 (0, 0)부터 시작하여 (300, 0) 등으로 움직이고 난 후 마지막에 다시 원위치로 돌아가고 있다. 
+
+    keyframes를 동작시키게 하려면 동작당하는 요소가 position이 relative여야 하며, animation속성으로 keyframes의 이름, 몇초 걸리는지, 그리고 얼만큼 작동하는 지를 작성해야 한다.
+    infinite로 작성하면 무한 반복된다.
+    animation-direction은 normal, reverse, alternate, alternate-reverse을 가지고 있다.
+    예를 들어서, 일반적으로 애니메이션이 아래와 같이 작성되었다고 해보자.
+
+    @keyframes animat1 {
+        from {background : red; top : 0; left : 0;} <--- 이 위치를 A
+        50% {background : orange; top : 0; left : 50;} <--- 이 위치를 B
+        to {background : yellow; top : 0; left : 100;} <--- 이 위치를 C라고 하자
+    }
+
+    이러면 normal은 그냥 정상적으로 A->B->C지만, reverse는 C->B->A가 될 것이다.
+    또한 alternate는 A->B->C->A가 아닌, A->B->C->B->A->B->... 이런 식으로 왔다가 가게끔 동작한다.
+    alternate-reverse는 C->B->A->B->C->... 이런 식으로 동작한다.
+-->

@@ -1,0 +1,37 @@
+<!--
+    9주차 리뷰 2. javascript 이용하여 20 by 20 배열 만든 후, 홀수번째 수를 hover할 때는 opacity가 0.5가 되도록
+    -> 뭔가 이상하게 됨
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #odd:hover {
+            opacity : 0.5;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var k = 1;
+
+        for (var i = 0; i < 20; i++) {
+            for (var j = 0; j < 20; j++) {
+                if (j % 2 != 0) {
+                    document.write (`<span id='odd'>${k++}<\span> `);
+                }
+
+                else {
+                    document.write (`${k++} `)
+                }
+            }
+
+            document.write ("<br>");
+        }
+    </script>
+</body>
+</html>

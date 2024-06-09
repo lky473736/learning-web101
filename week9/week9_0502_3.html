@@ -35,3 +35,41 @@
     [정답] <span class="ans">O형</span>
 </body>
 </html>
+
+<!--
+    opacity를 이용하여서 힌트와 정답을 표현하고 있다. 아래는 다른 예시이다.
+
+    <head>
+        <style>
+            #hint {
+                opacity : 0;
+            }
+
+            #hint:hover {
+                opacity : 1;
+                color : gray;
+            }
+
+            #ans {
+                opacity : 0;
+            }
+
+            #ans:hover {
+                opacity : 1;
+                color : red;
+            }
+        </style>    
+    </head>
+    <body>
+        <h1>깜짝퀴즈</h1>
+        <h3>지금 졸린 이유는?</h3>
+        <ol>
+            <li>어제 잠을 못자서</li>
+            <li>어제 잠을 못자서</li>
+            <li>역시나 어제 잠을 못자서</li>
+        </ol>
+
+        힌트 : <span id='hint'>세개 다 정답이 동일하다</span> <br>
+        정답 : <span id='ans'>셋 다 복수정답</span>
+    </body>
+-->

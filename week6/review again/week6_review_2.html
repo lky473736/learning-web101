@@ -1,0 +1,31 @@
+<!--
+    6주차 리뷰 2. 가상 선택자 사용한 2차원 변환
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width : 100px;
+            height : 100px;
+            border : 1px solid black;
+            background: linear-gradient(red, yellow);
+            transition-duration : 1s;
+        }
+
+        div:hover {
+            transform : rotate(360deg);
+        }
+
+        div:active { 
+            transform : scale(2, 2);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

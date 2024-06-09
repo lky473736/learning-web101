@@ -1,0 +1,52 @@
+<!--
+    6주차 리뷰 3. 자손 선택자, 후손 선택자
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul span {
+            color : red;
+        }
+
+        li > span {
+            color : blue;
+        }
+
+        li > span > b {
+            color : green;
+        }
+
+        #ulid > li > b {
+            color : red;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ulid">
+        <li><b>동물</b>
+            <ul>
+                <li>초식동물 : <span>풀떼기를 먹음</span>
+                    <ul>
+                        <li>다람쥐</li>
+                        <li>기린</li>
+                    </ul>
+                </li>
+                <li>육식동물 : <span>고기 먹음</span>
+                    <ul>
+                        <li>호랑이</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><b>식물</b> :  <span><b>풀떼기</b></span>
+            <ul>
+                <li>잡초</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
