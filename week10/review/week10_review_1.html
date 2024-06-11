@@ -1,0 +1,42 @@
+<!--
+    10주차 리뷰 1. 공이 얕게 튀기다가, 높게 튀기다가...
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes bounce {
+            from, 50%, to {
+                top : 200px;
+                left : 30px;
+                animation-timing-function : ease-out;
+            }
+
+            25% {
+                top : 100px;
+                animation-timing-function : ease-in;
+            }
+
+            75% {
+                top : 25px;
+                animation-timing-function : ease-in;
+            }
+        }
+
+        div {
+            position : relative;
+            animation : bounce 2s linear infinite normal;
+            width : 30px;
+            height : 30px;
+            border-radius : 10px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

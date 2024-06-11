@@ -10,6 +10,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!--
+        keyframes을 이용하여 bounce을 만들어냈고, animation-timing-function 효과를 ease-out, ease-in을 주어 공이 튀기는 느낌을 표현하였다.
+        border-radius을 사용하여 사각형 div의 꼭짓점을 둥글게 하여 공을 표현한 것을 확인할 수 있다. 
+        animation-duration은 animation이 동작하는 시간으로, 만약 animation-duration을 빨리 하게 된다면 빠르게 움직일 것이다.
+        animation-delay는 animation이 특정 상황 시 delay을 가지면서 동작하는 것이다.
+        animation-iteration-count를 infinite로 두게 된다면 무한적으로 animation 동작을 반복한다.
+    -->
     <style>
         @keyframes bounce {
             from, to {

@@ -5,7 +5,7 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="week11_0516_7_js.js"></script>
+    <script src="week11_0516_7_js.js"></script> <!--외부 파일을 참조하고 있다. 외부 파일을 참조할 때에는 <script src="외부파일의경로"> </script>로 기술한다.-->
     <script>
         let a = 0; // var
         // const 쓰면 아래 script 태그는 안보임
@@ -28,3 +28,7 @@
     </script>
 </body>
 </html>
+
+<!--
+    굉장히 신기한 점은, 자바스크립트의 script 태그는 서로 열고 닫는 태그가 위처럼 분리되어 있어도 a라고 하는 변수가 그대로 유지되는 것을 파악 가능하다.
+-->

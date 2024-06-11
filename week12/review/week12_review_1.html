@@ -1,0 +1,27 @@
+<!--
+    12주차 리뷰 1. 전역변수와 지역변수의 차이점을 알아보자
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var glob_var = 10;
+
+        function print() {
+            glob_var = -50; // 자동전역변수
+            document.write (glob_var, '<br>');
+            
+            var glob_var = -100; // 지역변수
+            return glob_var;
+        }
+
+        var local_var = print();
+        document.write (local_var); // 지역변수
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!--
+    12주차 리뷰 3. 로그인 시스템 구현 
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var present_id = "daramji";
+        var present_pw = "daramji1234";
+
+        var id = prompt("ID?");
+        var pw = prompt("Password?");
+
+        if (id === present_id) {
+            if (pw === present_pw) {
+                document.write ("로그인 성공!");
+            }
+
+            else {
+                document.write ("id 혹은 pw가 다릅니다.");
+                location.href = "week12_review_3.html";
+            }
+        }
+
+        else {
+            document.write ("id가 다릅니다.");
+            location.href = "week12_review_3.html";
+        }
+    </script>
+</body>
+</html>

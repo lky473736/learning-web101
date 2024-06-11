@@ -7,6 +7,34 @@
     202334734 컴퓨터공학전공 임규연
 -->
 
+<!--
+    animation-direction같은 경우에는 animation의 방향을 조정할 수 있다.
+    normal, reverse, alternate, alternate-reverse가 있다.
+    
+    예를 들어서, keyframes을 아래와 같이 짰다고 해보자.
+
+    @keyframes move {
+        from {
+            top : 0px;
+        }
+
+        50% {
+            top : 50px;
+        }
+
+        to {
+            top : 100px;
+        }
+    }
+
+    만약 animation-iteration-count를 infinite라 설정하고, from을 A, 50%을 B, to를 C라 한다면, normal, reverse, alternate, alternate-reverse의 차이는 아래와 같다.
+
+    normal : A->B->C->A->B->C->...
+    reverse : C->B->A->C->B->A->...
+    alternate : A->B->C->B->A->B->...
+    alternate-reverse : C->A->B->A->C->B->A->...    
+-->
+
 <html>
 <head>
     <style> 

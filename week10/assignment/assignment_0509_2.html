@@ -9,6 +9,11 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!--
+        키프레임을 정의하여 왼쪽 박스는 0pt부터 시작하여 200pt까지, 오른쪽 박스는 400pt부터 시작하여 200pt까지 동작하도록 하였다.
+        animation-direction을 alternate로 하였는데, 이는 from->to를 갔다가 다시 to->from으로 역행하는 방식이고,
+        alternate-reverse는 그의 반대이다. 사실은 여기서는 alternate를 사용했어도 같은 동작이다.
+    -->
     <style> 
         div {
             width: 100px; 
@@ -28,7 +33,7 @@
 
         #div2 {
             background-color: yellow;
-            animation-direction: alternate-reverse;
+            animation-direction: alternate;
             animation-name: R-box;
         }
 

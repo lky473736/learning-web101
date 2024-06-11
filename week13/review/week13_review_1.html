@@ -1,0 +1,39 @@
+<!--
+    13주차 리뷰 1. 팩토리얼 함수 만들기 (하나는 재귀 이용해서, 하나는 반복문 이용해서)
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var recu_fact = function (n) {
+            // document.write ("<button type='button' onclick='location.href=`week13_review_1.html`'>돌아가기</button>");
+            if (n == 0) {
+                return 0;
+            }
+
+            else {
+                return n * recu_fact(n-1);
+            }
+        }
+
+        var while_fact = function (n) {
+            // document.write ("<button type='button' onclick='location.href=`week13_review_1.html`'>돌아가기</button>");
+            var rst = 1;
+
+            while (n !== 0) {
+                rst *= n--;
+            }
+
+            return rst;
+        }
+    </script>
+
+    <button type="button" onclick="recu_fact(10)">recu_fact</button>
+    <button type="button" onclick="while_fact(10)">while_fact</button>
+</body>
+</html>

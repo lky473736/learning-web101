@@ -1,0 +1,67 @@
+<!--
+    13주차 리뷰 2. 1~100까지 홀수 출력 버튼, 1~100까지 짝수 출력 버튼 (배열 사용)
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+        var ind = 0;
+        var sum = 0;
+
+        for (ind = 0; ind < 100; ind++) {
+            arr[ind] = ind+1;
+            sum += arr[ind];
+            document.write (`${arr[ind]} `);
+        }
+
+        document.write ("<br>");
+        document.write ("배열의 총 데이터 갯수 : ", arr.length, "<br>");
+        document.write ("배열의 총합 : ", sum, "<br>");
+        document.write ("배열의 평균 : ", sum/arr.length, "<br>");
+
+        var printOdd = function () {
+            var oddSum = 0;
+            var oddNum = 0;
+            
+            for (ind = 0; ind < 100; ind += 2) {
+                document.write (`${arr[ind]} `);
+                oddSum += arr[ind];
+                oddNum++;
+            }
+
+            document.write ("<br>");
+            document.write ("홀수 배열의 총 데이터 갯수 : ", oddNum, "<br>");
+            document.write ("홀수 배열의 총 데이터 총합 : ", oddSum, "<br>");
+            document.write ("홀수 배열의 총 데이터 평균 : ", oddSum/oddNum, "<br>");
+
+            document.write ("<button type='button' onclick='location.href=`week13_review_2.html`'>돌아가기</button>");
+        }
+
+        var printEven = function () {
+            var evenSum = 0;
+            var evenNum = 0;
+            
+            for (ind = 1; ind < 100; ind += 2) {
+                document.write (`${arr[ind]} `);
+                evenSum += arr[ind];
+                evenNum++;
+            }
+
+            document.write ("<br>");
+            document.write ("짝수 배열의 총 데이터 갯수 : ", evenNum, "<br>");
+            document.write ("짝수 배열의 총 데이터 총합 : ", evenSum, "<br>");
+            document.write ("짝수 배열의 총 데이터 평균 : ", evenSum/evenNum, "<br>");
+            document.write ("<button type='button' onclick='location.href=`week13_review_2.html`'>돌아가기</button>");
+        }
+    </script>
+
+    <button type="button" onclick="printOdd()">홀수 배열 보여주기</button>
+    <button type="button" onclick="printEven()">짝수 배열 보여주기</button>
+</body>
+</html>

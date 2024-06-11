@@ -1,0 +1,48 @@
+<!--
+    11주차 리뷰 2. 4-color move
+    공 튀기기, 근데 빨, 노, 초, 파 색깔이 나는
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes rainbowmove {
+            from, to {
+                left : 100px;
+                top : 500px;
+                background-color: red;
+                animation-timing-function : ease-out;
+            }
+
+            25% {
+                background-color: yellow;
+            } 
+
+            50% {
+                top : 100px;
+                background-color: green;
+                animation-timing-function : ease-in;
+            }
+
+            70% {
+                background-color: blue;
+            }
+        }
+
+        div {
+            position : relative;
+            animation : rainbowmove 3s infinite normal;
+            border-radius : 300px;
+            background: box-shadow (0px 10px black);
+            width : 100px;
+            height : 100px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
