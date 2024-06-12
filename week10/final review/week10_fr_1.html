@@ -1,0 +1,24 @@
+<!--
+    transition을 이용하여 active할 때 멧밭쥐 사진을 100px, 100px로 이동시키고,
+    이동시키면서 사이즈를 2배 정도로 키워라. 지속 시간은 2초이다.
+
+    * transform시에 속성값을 집어넣을 때는 ,을 집어넣지 말고 띄어쓰기로 구분한다.
+-->
+
+<head>
+    <style>
+        img {
+            position : relative;
+            width : 100px;
+            border-radius : 100px;
+        }
+
+        img:active {
+            transform : translate(500px, 500px) scale(2, 2);
+            transition-duration : 2s;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://img.animalplanet.co.kr/news/2019/12/23/700/131i173y7wra6204v3wn.jpg" alt="멧밭쥐">
+</body>

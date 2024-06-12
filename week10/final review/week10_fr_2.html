@@ -1,0 +1,60 @@
+<!--
+    키프레임을 이용해서 두개의 div가 부딪혔다가 다시 튀어나가는 형태를 구현하자.
+    무한번 반복된다.
+-->
+
+<head>
+    <style>
+        @keyframes bumpinto1 {
+            from {
+                top : 10px;
+                left : 50px;
+            }
+            
+            50% {
+                left : 100px;
+            }
+
+            to {
+                left : 150px;
+            }
+        }
+
+        @keyframes bumpinto2 {
+            from {
+                top : 10px;
+                left : 150px;
+            }
+            
+            50% {
+                left : 200px;
+            }
+
+            to {
+                left : 250px;
+            }
+        }
+
+        #id1 {
+            animation : bumpinto1 3s linear alternate infinite;
+            position : absolute;
+            width : 50px;
+            height : 100px;
+            background-color: red;
+            border : 1px solid black;
+        }
+
+        #id2 {
+            animation : bumpinto2 3s linear alternate-reverse infinite;
+            position : absolute;
+            width : 50px;
+            height : 100px;
+            background-color: blue;
+            border : 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="id1"></div>
+    <div id="id2"></div>
+</body>
