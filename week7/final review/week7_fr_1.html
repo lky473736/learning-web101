@@ -1,0 +1,137 @@
+<!--
+    absolute와 relative, static, fixed를 알아보자.
+
+    absolute는 절대 위치 지정으로, 가장 가까운 부모 요소의 위치를 기반으로 작동된다. 만약 부모 요소가 없다면 body를 기준으로 한다.
+
+    relative는 상대 위치 지정으로, 정적 (static)요소로부터 얼마만큼 떨어져있는지를 표시하는 방법이다. 이때 정적 요소의 왼쪽 아래 꼭짓점을 기준으로 거리를 계산한다.
+
+    static은 정적 위치 지정으로, 위치를 지정하지 않는 것이다. 아무리 top이나 left 그런거 지정해도 안먹힌다.
+
+    fixed는 고정 위치 지정으로, 어떤 위치든 fixed를 하면 스크롤을 내리던 그 위치에 고정된다. 따라서 위로가기 버튼을 만들 때 좋다.
+-->
+
+<head>
+    <style>
+        div {
+            width : 100px;
+            height : 50px;
+            border : 1px solid black;
+        }
+
+        #id1 {
+            position : static;
+        }
+
+        #id2 {
+            position : relative;
+            top : 30px;
+            left : 10px;
+        }
+
+        #id3 {
+            position : relative;
+            top : 60px;
+            left : 20px;
+        }
+
+        #id4 {
+            position : fixed;
+            left : 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="id1"></div>
+    <div id="id2"></div>
+    <div id="id3"></div>
+    <a id="id4" href="#id1">#id1</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+    <p>
+        daramji
+    </p>
+</body>
+
