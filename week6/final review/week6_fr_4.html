@@ -1,0 +1,36 @@
+<!--
+    C, P, B, M이라고 하는 것은 CSS의 영역이다.
+    각각은 Contents, Padding, Border, Margin을 의미한다.
+    Contents : 내용을 의미하며, 내용을 직접적으로 꾸민다.
+    Padding : contents와 border 사이의 공간을 의미한다.
+    Border : 테두리를 의미한다.
+    Margin : 다른 요소들 사이의 간격을 의미한다.
+-->
+
+
+<head>
+    <style>
+        div {
+            width : 100px;
+            height : 100px;
+            border : 1px solid black;
+        }
+
+        div#id1 {
+            display : inline-block;
+            background-color : yellow;
+            padding : 10px 10px 10px 10px;
+            margin-right : 10px;
+        }
+
+        div#id2 {
+            display : inline-block;
+            background-color : green;
+            padding : 10px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="id1">id1</div>
+    <div id="id2">id2</div>
+</body>

@@ -1,0 +1,33 @@
+<!--
+    우선순위에 따라서 스타일이 결정된다.
+    class보다는 id가 우선순위가 높다 (왜냐면 id가 class보다 유일무이성을 가진다)
+    가장 가까운 선택자가 우선순위가 높다.
+    뭔가 더 자세하고 명확하면 우선순위가 높다. 
+    태그 선택자를 이용하여 전체 공통된 속성을 정의할 수 있고, 이는 각 태그마다 동일히 적용된다. 마치 추상 클래스처럼 말이다. (상속)
+-->
+
+<head>
+    <style>
+        .c1 {
+            color : red;
+        }
+
+        #id1 {
+            color : blue;
+        }
+
+        span#id1 {
+            color : green;
+        }
+
+        span.c1#id1 {
+            color : gray;
+        }
+    </style>
+</head>
+<body>
+    <span class="c1" id="id1">gray</span> 
+    <span class="c1">red</span>
+    <span id="id1">green</span> <!--span#id1이 #id1 선택자보다 더욱 자세히 작성되었기 때문에 우선순위가 높다.-->
+    <span>none</span>
+</body>

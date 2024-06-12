@@ -1,0 +1,28 @@
+<!--
+    후손 선택자와 자손 선택자를 구분하자.
+    후손 선택자는 내 밑에 있는 모든 태그들을 의미한다. : div h1
+    자손 선택자는 내 바로 밑에 있는 태그들을 의미한다. : div > h1
+-->
+
+<head>
+    <style>
+        ul > li {
+            color : red;
+        }
+
+        ol b {
+            color : blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>daramji</li> <!--빨간색-->
+        <li>cat</li> <!--빨간색-->
+        <li>mouse <!--빨간색-->
+            <ol>
+                <li><b>daramji?</b></li> <!--파란색-->
+            </ol>
+        </li>
+    </ul>
+</body>
