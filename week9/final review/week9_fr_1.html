@@ -1,0 +1,30 @@
+<!--
+    opacity는 투명도다. 투명도가 0이면 투명, 1이면 불투명하다.
+-->
+
+<head>
+    <style>
+        @keyframes hide {
+            from {
+                opacity : 1;
+                left : 0px;
+            }
+
+            to {
+                opacity : 0;
+                left : 300px;
+            }
+        }
+
+        div {
+            position : relative;
+            animation : hide 2s infinite normal;
+            width : 50px;
+            height : 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>

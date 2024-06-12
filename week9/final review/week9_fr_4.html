@@ -1,0 +1,55 @@
+<!--
+    z-index값을 이용하여 linear-gradient로 예쁜 계단을 만들어보자.
+-->
+
+<head>
+    <style>
+        div {
+            width : 100px;
+            height : 100px;
+            border : 1px solid black;
+            transition-duration : 2s;
+        }
+
+        #id1 {
+            background : linear-gradient(90deg, red, white);
+            z-index : 0;
+            position : absolute;
+        }
+
+        #id2 {
+            background : linear-gradient(90deg, yellow, white);
+            z-index : 1;
+            position : absolute;
+            left : 50px;
+        }
+
+        #id3 {
+            background : linear-gradient(90deg, green, white);
+            z-index : 2;
+            position : absolute;
+            left : 100px;
+        }
+
+        #id4 {
+            background : linear-gradient(90deg, blue, white);
+            z-index : 3;
+            position : absolute;
+            left : 150px;
+        }
+
+        #id5 {
+            background : linear-gradient(90deg, pink, white);
+            z-index : 4;
+            position : absolute;
+            left : 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="id1"></div>
+    <div id="id2"></div>
+    <div id="id3"></div>
+    <div id="id4"></div>
+    <div id="id5"></div>
+</body>

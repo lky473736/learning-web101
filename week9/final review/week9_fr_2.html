@@ -1,0 +1,30 @@
+<!--
+    inline 요소는 브라우저의 특정 영역을 지칭하고, width와 height의 값을 지정할 수 없다.
+    block 요소는 브라우저의 전체 가로를 지칭하고, width와 height의 값을 지정할 수 있다.
+    inline-block 요소는 브라우저의 특정 영역을 지칭할 수도 있고, 가로를 지칭할 수도 있으며, width와 height값 또한 지정할 수 있다.
+
+    이를 자유롭게 지정 가능한 것이 display 속성이다. display 속성을 통해 기존 inline 요소를 block 요소로도 변경이 가능하고 그 반대도 가능하다.
+-->
+
+<head>
+    <style>
+        span {
+            display : block;
+            width : 100px;
+            height : 100px;
+            background-color: yellow;
+            border : 1px solid black;
+        }
+        div {
+            display : inline;
+            width : 100px;
+            height : 100px;
+            background-color: green;
+            border : 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>안녕하세요</div>
+    <span>안녕하세요</span>
+</body>

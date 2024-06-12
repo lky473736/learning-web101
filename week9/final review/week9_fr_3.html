@@ -1,0 +1,26 @@
+<!--
+    linear-gradient를 이용하여 선형 그라디언트를 표현할 수 있다.
+    background 속성의 속성값으로 설정하며, 2가지 이상의 색깔을 인자로 집어넣으면 된다.
+
+    * 함수명과 인자 괄호에 불필요한 공백을 집어넣으면 안된다. 공백을 집어넣지 말자.
+-->
+
+<head>
+    <style>
+        #id1 {
+            width : 100px;
+            height : 100px;
+            border : 1px solid black;
+            background : linear-gradient(blue, white);
+        }
+
+        #id1:active {
+            transform : rotate(135deg);
+            transition-duration : 5s;
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="id1"></div>
+</body>
