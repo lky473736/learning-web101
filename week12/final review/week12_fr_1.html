@@ -1,0 +1,72 @@
+<!--
+    회원가입 시스템과 로그인 시스템을 구현해보자.
+    prompt, location.href을 사용한다.
+    로그인과 비밀번호는 각각 daramji, daramji1234이다.
+
+    * location.href는 다시 그 문서에 접속하는 것이라 이전의 변수는 전부 리셋된다.
+-->
+
+<head>
+</head>
+<body>
+    <script>
+        var findId = function (arr, id) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i][0] == id) {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        var presentId = "daramji";
+        var presentPw = "daramji1234";
+
+        var list = [[presentId, presentPw]];
+        var ind = 1;
+
+        var inputId = prompt ("id? (if not user, input 0)");
+
+        if (inputId == "0") {
+            while (true) {
+                var newId = prompt ("new id?");
+    
+                if (findId(list, newId) == -1) {
+                    var newPw = prompt ("new pw?");
+                    list[ind++] = [newId, newPw];
+                    alert ("OK");
+                    break;
+                }
+
+                else {
+                    alert ("your input is already taken");
+                    continue;
+                }
+            }
+
+            location.href = "week12_fr_1.html"
+        }
+
+        else {
+            if (findId(list, inputId) !== -1) {
+                var inputPw = prompt ("pw?");
+
+                if (list[findId(list, inputId)][1] == inputPw) {
+                    alert ("SUCCESS");
+                    document.write ("<h1>hello</h1>");
+                }
+
+                else {
+                    alert ("wrong");
+                    location.href = "week12_fr_1.html"; 
+                }
+            }
+
+            else {
+                alert ("wrong");
+                location.href = "week12_fr_1.html";
+            }
+        }
+    </script>
+</body>

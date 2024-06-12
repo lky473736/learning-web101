@@ -1,0 +1,33 @@
+<!--
+    버튼을 통하여 홀수배열, 짝수배열 생성하기
+-->
+
+<head>
+
+</head>
+<body>
+    <script>    
+        var odd = function () {
+            for (var i = 1; i <= 100; i++) {
+                if (i % 2 != 0) {
+                    document.write (i, " ");
+                }
+            }
+
+            document.write ("<button type='button' onclick='location.href=`week13_fr_1.html`'>back</button>");
+        }
+
+        var even = function () {
+            for (var i = 1; i <= 100; i++) {
+                if (i % 2 == 0) {
+                    document.write (i, " ");
+                }
+            }
+
+            document.write ("<button type='button' onclick='location.href=`week13_fr_1.html`'>back</button>");
+        }
+    </script>
+
+    <button type="button" onclick="odd()">odd</button>
+    <button type="button" onclick="even()">even</button>
+</body>
